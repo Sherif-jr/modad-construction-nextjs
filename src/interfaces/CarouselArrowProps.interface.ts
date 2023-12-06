@@ -6,5 +6,6 @@ export default interface ArrowsProps {
   onClick?: React.MouseEventHandler | undefined;
   icon?: IconDefinition;
   left?: number;
+  right: number;
   iconClassName?: string;
 }
