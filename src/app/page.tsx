@@ -92,7 +92,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full aspect-video lg:aspect-auto lg:w-[60%] relative">
-            <Image src="/chairman.jpg" alt="" className="object-cover" fill />
+            <Image src="/Chairman.jpg" alt="" className="object-cover" fill />
           </div>
           <div className="absolute w-1/2 h-[350vh] -rotate-[30deg] hidden lg:flex -bottom-[100vh]">
             <div className="grow h-full bg-[#111619] "></div>
