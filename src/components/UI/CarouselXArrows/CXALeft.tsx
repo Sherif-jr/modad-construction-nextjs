@@ -10,7 +10,6 @@ const CXALeft: FC<ArrowsProps> = (props: ArrowsProps) => {
   if (leftSpace === undefined) {
     leftSpace = 2;
   }
-  console.log(style);
 
   return (
     <div
