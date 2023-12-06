@@ -5,10 +5,10 @@ import { FC } from "react";
 import ArrowsProps from "../../../interfaces/CarouselArrowProps.interface";
 
 const CXARight: FC<ArrowsProps> = (props: ArrowsProps) => {
-  const { className, style, onClick, icon, iconClassName, left } = props;
-  let leftSpace = left;
-  if (leftSpace === undefined) {
-    leftSpace = 98;
+  const { className, style, onClick, icon, iconClassName, right } = props;
+  let rightSpace = right;
+  if (rightSpace === undefined) {
+    rightSpace = 98;
   }
   return (
     <div
@@ -17,7 +17,7 @@ const CXARight: FC<ArrowsProps> = (props: ArrowsProps) => {
         ...style,
         display: "block",
         color: "white",
-        left: `${leftSpace}%`,
+        right: `${rightSpace}%`,
       }}
       onClick={onClick}
     >
