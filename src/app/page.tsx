@@ -153,15 +153,16 @@ export default function Home() {
       <section>
         <div className="w-full aspect-video">
           <Carousel
+            dots={false}
             arrows
             prevArrow={
-              <CXALeft icon={faCaretLeft} iconClassName="text-3xl" left={3} />
+              <CXALeft icon={faCaretLeft} iconClassName="text-3xl" left={5} />
             }
             nextArrow={
               <CXARight
                 icon={faCaretRight}
                 iconClassName="text-3xl"
-                left={97}
+                right={5}
               />
             }
           >
