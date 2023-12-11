@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "@/components/layout/Footer";
 import { ConfigProvider, theme } from "antd";
+import Providers from "@/lib/Providers";
 config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,18 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <ConfigProvider
-            theme={{
-              algorithm: darkAlgorithm,
-              token: { colorPrimary: "#CBA052" },
-            }}
-          >
-            <Header />
-            {children}
-            <Footer />
-          </ConfigProvider>
-        </StyledComponentsRegistry>
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
