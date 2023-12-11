@@ -6,6 +6,7 @@ import ProjectCard from "@/components/UI/ProjectCard";
 import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import CXARight from "@/components/UI/CarouselXArrows/CXARight";
+import ReadMoreCollapse from "@/components/UI/ReadMoreCollapse";
 export default function Home() {
   return (
     <>
@@ -24,6 +25,27 @@ export default function Home() {
                 className="w-full object-cover"
                 fill
               />
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="mr-12 w-full sm:w-[500px] opacity-100 px-4">
+                  <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
+                    title
+                  </h2>
+                  <p className="text-xs sm:text-base md:text-xl">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Sit labore temporibus dolor perferendis incidunt fugiat ex
+                    inventore animi quae ipsam libero, blanditiis sed
+                    consequatur tempora illo consequuntur qui eligendi
+                    repudiandae?
+                  </p>
+                  <Button
+                    style={{ borderRadius: 0, fontWeight: 700 }}
+                    className="uppercase opacity-100 mt-6"
+                    type="primary"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
             </div>
             <div className="aspect-video relative xl:max-h-screen">
               <Image
@@ -32,6 +54,27 @@ export default function Home() {
                 className="w-full object-cover"
                 fill
               />
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="mr-12 w-full sm:w-[500px] opacity-100 px-4">
+                  <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
+                    Second TItle
+                  </h2>
+                  <p className="text-xs sm:text-base md:text-xl">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Sit labore temporibus dolor perferendis incidunt fugiat ex
+                    inventore animi quae ipsam libero, blanditiis sed
+                    consequatur tempora illo consequuntur qui eligendi
+                    repudiandae?
+                  </p>
+                  <Button
+                    style={{ borderRadius: 0, fontWeight: 700 }}
+                    className="uppercase opacity-100 mt-6"
+                    type="primary"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
             </div>
             <div className="aspect-video relative xl:max-h-screen">
               <Image
@@ -40,6 +83,27 @@ export default function Home() {
                 className="w-full object-cover"
                 fill
               />
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="mr-12 w-full sm:w-[500px] opacity-100 px-4">
+                  <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
+                    Third title
+                  </h2>
+                  <p className="text-xs sm:text-base md:text-xl">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Sit labore temporibus dolor perferendis incidunt fugiat ex
+                    inventore animi quae ipsam libero, blanditiis sed
+                    consequatur tempora illo consequuntur qui eligendi
+                    repudiandae?
+                  </p>
+                  <Button
+                    style={{ borderRadius: 0, fontWeight: 700 }}
+                    className="uppercase opacity-100 mt-6"
+                    type="primary"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
             </div>
           </Carousel>
         </div>
@@ -57,37 +121,22 @@ export default function Home() {
                 changing market dynamic we have developed a work ethic centered
                 around...
               </p>
-              <Collapse
-                ghost
-                items={[
-                  {
-                    key: "readmore",
-                    label: <button className="text-white">Read more</button>,
-                    showArrow: false,
-                    children: (
-                      <p className="text-white">
-                        Agility drives our continuous success as today’s market
-                        is rapidly changing. To ensure that we exceed our
-                        clients’ expectations we make sure we are always one
-                        step ahead in the market and ready to overcome any
-                        challenge we face. Hard work & Commitment: Our client is
-                        at the heart of our operations, and we put in the effort
-                        and hard work to deliver our projects exceptionally. We
-                        are proud of our dedication and commitment to help our
-                        clients grow and reach their business goals.
-                        Diversification: With a diverse and wide scope of
-                        services provided we ensure to meet all requirements and
-                        provide our customers with all the solutions needed for
-                        their projects. Quality: We take quality very seriously
-                        in all of our processes. We have an exceptional quality
-                        assurance team that is experienced in ensuring our
-                        clients receive their projects at the highest quality
-                        standards available with the most suitable materials for
-                        their projects.
-                      </p>
-                    ),
-                  },
-                ]}
+              <ReadMoreCollapse
+                content="Agility drives our continuous success as today’s market is rapidly
+              changing. To ensure that we exceed our clients’ expectations we
+              make sure we are always one step ahead in the market and ready to
+              overcome any challenge we face. Hard work & Commitment: Our client
+              is at the heart of our operations, and we put in the effort and
+              hard work to deliver our projects exceptionally. We are proud of
+              our dedication and commitment to help our clients grow and reach
+              their business goals. Diversification: With a diverse and wide
+              scope of services provided we ensure to meet all requirements and
+              provide our customers with all the solutions needed for their
+              projects. Quality: We take quality very seriously in all of our
+              processes. We have an exceptional quality assurance team that is
+              experienced in ensuring our clients receive their projects at the
+              highest quality standards available with the most suitable
+              materials for their projects."
               />
             </div>
           </div>
@@ -230,31 +279,67 @@ export default function Home() {
               <h3 className="text-2xl xl:text-3xl">News</h3>
             </div>
             <div className="col-span-5 flex flex-col gap-4">
-              <div className="flex gap-2">
-                <div className="relative w-2/5 aspect-square shrink-0">
-                  <Image
-                    fill
-                    src="/imgs/shutterstock_1913548069.jpg"
-                    alt=""
-                    className="object-cover"
-                  />
+              <Carousel
+                dots={false}
+                arrows
+                prevArrow={<CXALeft left={0} iconClassName="text-xl" />}
+                nextArrow={<CXARight right={0} iconClassName="text-xl" />}
+              >
+                <div>
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <div className="relative w-full sm:w-2/5 aspect-square shrink-0">
+                      <Image
+                        fill
+                        src="/imgs/shutterstock_1913548069.jpg"
+                        alt=""
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <h3 className="mb-3 text-base lg:text-xl font-bold">
+                        LOREM IPSUM DOLOR (REUTERS){" "}
+                      </h3>
+                      <p className="text-xs md:text-base">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        doloreolore eu feugiat nulla facilisis at vero eros et
+                        accumsan et iusto odio dignissim qui blandit praesent
+                        luptatum zzril delenit augue duis dolore te feugait
+                        nulla facilisi. Lorem ipsum dolor sit amet, cons
+                        ectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex flex-col justify-center">
-                  <h3 className="mb-3 text-base lg:text-xl font-bold">
-                    LOREM IPSUM DOLOR (REUTERS){" "}
-                  </h3>
-                  <p className="text-xs md:text-base">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                    sed diam nonummy nibh euismod tincidunt ut laoreet
-                    doloreolore eu feugiat nulla facilisis at vero eros et
-                    accumsan et iusto odio dignissim qui blandit praesent
-                    luptatum zzril delenit augue duis dolore te feugait nulla
-                    facilisi. Lorem ipsum dolor sit amet, cons ectetuer
-                    adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore
-                  </p>
+                <div>
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <div className="relative w-full sm:w-2/5 aspect-square shrink-0">
+                      <Image
+                        fill
+                        src="/imgs/shutterstock_1913548069.jpg"
+                        alt=""
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center">
+                      <h3 className="mb-3 text-base lg:text-xl font-bold">
+                        LOREM IPSUM DOLOR (REUTERS){" "}
+                      </h3>
+                      <p className="text-xs md:text-base">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                        doloreolore eu feugiat nulla facilisis at vero eros et
+                        accumsan et iusto odio dignissim qui blandit praesent
+                        luptatum zzril delenit augue duis dolore te feugait
+                        nulla facilisi. Lorem ipsum dolor sit amet, cons
+                        ectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Carousel>
             </div>
           </div>
         </div>
