@@ -7,6 +7,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons/faXTwitter";
+import FooterContactForm from "./FooterContactForm";
 const Footer = () => {
   return (
     <footer className="bg-black text-white">
@@ -57,6 +58,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center gap-5">
             <p className="uppercase font-bold text-xl">Contact with us</p>
+            <div>
+              <FooterContactForm />
+            </div>
             <div className="flex gap-2 justify-evenly items-center w-48">
               <Link
                 href="/"
