@@ -16,13 +16,13 @@ const Header = () => {
         <nav className="hidden lg:block">
           <ul className="flex gap-4 text-sm font-bold">
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Link href="#">About us</Link>
+              <Link href="/about-us">About us</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <Link href="#">Our Services</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Link href="#">Our Projects</Link>
+              <Link href="/projects">Our Projects</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <Link href="#">Quality Assurance</Link>
@@ -34,7 +34,7 @@ const Header = () => {
               <Link href="#">Careers</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Link href="#">Contact us</Link>
+              <Link href="/contact-us">Contact us</Link>
             </li>
           </ul>
         </nav>
