@@ -1,7 +1,10 @@
 import BreadCrumbs from "@/components/UI/BreadCrumbs";
+import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
+import CXARight from "@/components/UI/CarouselXArrows/CXARight";
 import HomeExpCard from "@/components/UI/HomeExpCard";
 import { faBullseye, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Carousel } from "antd";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -172,43 +175,87 @@ const AboutUsPage = () => {
             range of sectors including but not limited to commercial, banking,
             administrative, hospitality, and residential.
           </p>
-          <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
-            <HomeExpCard
-              title="MODAD Group"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Construction"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Properties"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD MEP"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Smart Solutions"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Fine Finishing"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Foundation"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
+          <div className="py-12 px-0 md:px-10 lg:px-12 xl:px-0">
+            <Carousel
+              autoplay
+              autoplaySpeed={1500}
+              dots={false}
+              arrows
+              prevArrow={
+                <CXALeft
+                  xsLeft={-10}
+                  left={-5}
+                  iconClassName="text-xl text-black select-none"
+                />
+              }
+              nextArrow={
+                <CXARight
+                  xsRight={-10}
+                  right={-5}
+                  iconClassName="text-xl text-black select-none"
+                />
+              }
+              slidesToShow={6}
+              responsive={[
+                { breakpoint: 640, settings: { slidesToShow: 1 } },
+                { breakpoint: 767, settings: { slidesToShow: 2 } },
+                { breakpoint: 1024, settings: { slidesToShow: 3 } },
+                { breakpoint: 1279, settings: { slidesToShow: 5 } },
+              ]}
+              className="text-black"
+            >
+              <div>
+                <HomeExpCard
+                  title="MODAD Group"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+              <div>
+                <HomeExpCard
+                  title="MODAD Construction"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+              <div>
+                <HomeExpCard
+                  title="MODAD Properties"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+              <div>
+                <HomeExpCard
+                  title="MODAD MEP"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+              <div>
+                <HomeExpCard
+                  title="MODAD Smart Solutions"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+              <div>
+                <HomeExpCard
+                  title="MODAD Fine Finishing"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+              <div>
+                <HomeExpCard
+                  title="MODAD Foundation"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
+                  imgSrc="/imgs/shutterstock_1411133069.jpg"
+                />
+              </div>
+            </Carousel>
           </div>
+          {/* <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12"></div> */}
         </div>
       </section>
     </>
