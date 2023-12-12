@@ -18,7 +18,7 @@ const HomeExpCard = ({
         </div>
       </div>
       <h3 className="text-primary text-center mt-4 font-medium">{title}</h3>
-      <p className="mt-3 text-sm">{description}</p>
+      <p className="mt-3 text-sm px-2">{description}</p>
     </div>
   );
 };
