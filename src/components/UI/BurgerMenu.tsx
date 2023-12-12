@@ -38,7 +38,8 @@ const BurgerMenu = () => {
           content: { backgroundColor: "transparent" },
         }}
         classNames={{
-          body: "bg-black/60",
+          header: "bg-black/60 backdrop-blur ",
+          body: "bg-black/60 backdrop-blur",
         }}
         closeIcon={<FontAwesomeIcon icon={faX} className="text-white" />}
       >
