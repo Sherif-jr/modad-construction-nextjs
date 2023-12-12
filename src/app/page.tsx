@@ -17,6 +17,10 @@ export default function Home() {
             slidesToScroll={1}
             dots={{ className: "bottom-6" }}
             autoplay={true}
+            pauseOnFocus={false}
+            pauseOnHover={false}
+            pauseOnDotsHover={false}
+            infinite
           >
             <div className="aspect-video xl:max-h-screen relative">
               <Image
@@ -25,8 +29,8 @@ export default function Home() {
                 className="w-full object-cover"
                 fill
               />
-              <div className="relative w-full h-full flex items-center justify-center">
-                <div className="mr-12 w-full sm:w-[500px] opacity-100 px-4">
+              <div className="relative w-full h-full flex items-center justify-center text-white">
+                <div className="mr-12 w-full sm:w-[500px] px-4">
                   <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
                     title
                   </h2>
@@ -54,7 +58,7 @@ export default function Home() {
                 className="w-full object-cover"
                 fill
               />
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-full h-full flex items-center justify-center text-white">
                 <div className="mr-12 w-full sm:w-[500px] opacity-100 px-4">
                   <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
                     Second TItle
@@ -83,7 +87,7 @@ export default function Home() {
                 className="w-full object-cover"
                 fill
               />
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-full h-full flex items-center justify-center text-white">
                 <div className="mr-12 w-full sm:w-[500px] opacity-100 px-4">
                   <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
                     Third title
@@ -253,22 +257,65 @@ export default function Home() {
           <h2 className="text-primary text-2xl xl:text-3xl mb-6 xl:mb-12">
             Current Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-            <ProjectCard
-              title="P.1"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
-              imgSrc="/imgs/shutterstock_1559528492.jpg"
-            />
-            <ProjectCard
-              title="P.2"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
-              imgSrc="/imgs/shutterstock_2206514397.jpg"
-            />
-            <ProjectCard
-              title="P.3"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
-              imgSrc="/imgs/shutterstock_2272446391.jpg"
-            />
+          <div className="w-full px-6">
+            <Carousel
+              arrows
+              dots={false}
+              slidesToShow={3}
+              responsive={[
+                { breakpoint: 640, settings: { slidesToShow: 1 } },
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+              ]}
+              prevArrow={
+                <CXALeft left={-5} iconClassName="text-xl select-none" />
+              }
+              nextArrow={
+                <CXARight right={-5} iconClassName="text-xl select-none" />
+              }
+            >
+              <div>
+                <ProjectCard
+                  title="P.1"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
+                  imgSrc="/imgs/shutterstock_1559528492.jpg"
+                />
+              </div>
+              <div>
+                <ProjectCard
+                  title="P.2"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
+                  imgSrc="/imgs/shutterstock_2206514397.jpg"
+                />
+              </div>
+              <div>
+                <ProjectCard
+                  title="P.3"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
+                  imgSrc="/imgs/shutterstock_2272446391.jpg"
+                />
+              </div>
+              <div>
+                <ProjectCard
+                  title="P.4"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
+                  imgSrc="/imgs/shutterstock_2272446391.jpg"
+                />
+              </div>
+              <div>
+                <ProjectCard
+                  title="P.5"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
+                  imgSrc="/imgs/shutterstock_2272446391.jpg"
+                />
+              </div>
+              <div>
+                <ProjectCard
+                  title="P.6"
+                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam ipsum voluptas!"
+                  imgSrc="/imgs/shutterstock_2272446391.jpg"
+                />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
@@ -282,8 +329,12 @@ export default function Home() {
               <Carousel
                 dots={false}
                 arrows
-                prevArrow={<CXALeft left={-5} iconClassName="text-xl" />}
-                nextArrow={<CXARight right={-5} iconClassName="text-xl" />}
+                prevArrow={
+                  <CXALeft left={-5} iconClassName="text-xl select-none" />
+                }
+                nextArrow={
+                  <CXARight right={-5} iconClassName="text-xl select-none" />
+                }
               >
                 <div>
                   <div className="flex flex-col sm:flex-row gap-2">
@@ -297,7 +348,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col justify-center">
                       <h3 className="mb-3 text-base lg:text-xl font-bold">
-                        LOREM IPSUM DOLOR (REUTERS){" "}
+                        LOREM IPSUM DOLOR (REUTERS)
                       </h3>
                       <p className="text-xs md:text-base">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing

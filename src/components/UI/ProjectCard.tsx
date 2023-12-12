@@ -11,7 +11,7 @@ const ProjectCard = ({
 }) => {
   return (
     <div className="grid grid-cols-2">
-      <div className="relative">
+      <div className="relative aspect-square">
         <Image src={imgSrc} alt={title} fill className="object-cover" />
       </div>
       <div className="flex flex-col gap-3 p-4">
