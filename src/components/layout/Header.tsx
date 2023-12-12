@@ -63,7 +63,7 @@ const Header = () => {
               <Link href="#">Careers</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Link href="#">Portal</Link>
+              <Link href="#">Portals</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <NavLink href="/contact-us" exact activeClassName="text-primary">
