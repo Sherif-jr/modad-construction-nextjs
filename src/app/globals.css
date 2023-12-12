@@ -5,9 +5,9 @@
 html {
   scroll-behavior: smooth !important;
 }
-a {
+/* a {
   color: inherit !important;
-}
+} */
 @font-face {
   font-family: "mainMedium";
   src: url("/fonts/29LTZaridDisplay-Medium.otf");
