@@ -1,9 +1,8 @@
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.svg";
 import Link from "next/link";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import BurgerMenu from "../UI/BurgerMenu";
 
 const Header = () => {
