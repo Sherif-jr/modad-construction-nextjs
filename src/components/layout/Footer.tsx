@@ -26,32 +26,29 @@ const Footer = () => {
           <div>
             <ul className="flex flex-col gap-3">
               <li className="uppercase">
-                <Link href="/">DIVISIONS</Link>
+                <Link href="/about-us">About us</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">Highlights</Link>
+                <Link href="/">Our Group</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">Current Projects</Link>
+                <Link href="/projects">Proiects</Link>
               </li>
               <li className="uppercase">
                 <Link href="/">News</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">Corporate Responsibility</Link>
+                <Link href="/">Careers</Link>
               </li>
             </ul>
           </div>
           <div>
             <ul className="flex flex-col gap-3">
               <li className="uppercase">
-                <Link href="/">Contact us</Link>
+                <Link href="/">Portal</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">Privacy</Link>
-              </li>
-              <li className="uppercase">
-                <Link href="/">T & C</Link>
+                <Link href="/contact-us">Contact us</Link>
               </li>
             </ul>
           </div>

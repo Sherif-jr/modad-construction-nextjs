@@ -5,8 +5,8 @@ import { Button, Form, Input, Space } from "antd";
 
 const FooterContactForm = () => {
   return (
-    <Form>
-      <Form.Item name="email">
+    <Form layout="vertical">
+      <Form.Item name="email" label="Subscribe to our newsletter">
         <Space.Compact>
           <Input placeholder="Email" />
           <Button htmlType="submit">
