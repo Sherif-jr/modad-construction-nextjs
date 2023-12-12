@@ -2,8 +2,14 @@ import { Map } from "@/components/Map";
 import ContactUsFrom from "@/components/UI/ContactUsFrom";
 import { faEnvelopeOpen, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "MODAD - Contact Us",
+  description: "MODAD - Contact Us",
+  keywords: ["MODAD, contact, construction"],
+};
 const ContactUs = () => {
   return (
     <main className="bg-black">

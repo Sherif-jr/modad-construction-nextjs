@@ -12,8 +12,8 @@ config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Modad Construction",
-  description: "Modad Construction",
+  title: "Modad - Home",
+  description: "Modad Home",
 };
 
 export default function RootLayout({
