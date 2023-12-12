@@ -274,16 +274,16 @@ export default function Home() {
       </section>
       <section className="bg-primary">
         <div className="container mx-auto py-12">
-          <div className="grid grid-cols-5 lg:grid-cols-6 gap-y-6 px-1 md:px-0">
+          <div className="flex flex-col gap-12 px-1 md:px-0">
             <div>
               <h3 className="text-2xl xl:text-3xl">News</h3>
             </div>
-            <div className="col-span-5 flex flex-col gap-4">
+            <div className="col-span-5 flex flex-col gap-4 px-12">
               <Carousel
                 dots={false}
                 arrows
-                prevArrow={<CXALeft left={0} iconClassName="text-xl" />}
-                nextArrow={<CXARight right={0} iconClassName="text-xl" />}
+                prevArrow={<CXALeft left={-5} iconClassName="text-xl" />}
+                nextArrow={<CXARight right={-5} iconClassName="text-xl" />}
               >
                 <div>
                   <div className="flex flex-col sm:flex-row gap-2">
