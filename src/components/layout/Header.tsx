@@ -16,7 +16,7 @@ const NewsItems: MenuProps["items"] = [
 const Header = () => {
   const groupItems: MenuProps["items"] = companies.map((company) => ({
     key: company.path,
-    label: company.name,
+    label: <Link href={`/our-group/${company.path}`}>{company.name}</Link>,
   }));
   return (
     <header className="sticky z-50 top-0 left-0 w-full bg-black text-white h-16 px-4 lg:px-12">
