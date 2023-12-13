@@ -60,7 +60,7 @@ const Header = () => {
               </Dropdown>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Link href="#">Careers</Link>
+              <Link href="/careers">Careers</Link>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <Link href="#">Portals</Link>
