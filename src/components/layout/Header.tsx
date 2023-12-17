@@ -59,7 +59,7 @@ const Header = () => {
               </Dropdown>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <NavLink href="/projects" exact activeClassName="text-primary">
+              <NavLink href="/projects" activeClassName="text-primary">
                 Projects
               </NavLink>
             </li>
