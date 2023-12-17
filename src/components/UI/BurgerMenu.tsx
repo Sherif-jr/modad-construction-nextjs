@@ -76,7 +76,7 @@ const BurgerMenu = () => {
           </li>
           <li className="uppercase">
             <NavLink
-              href="#"
+              href="/projects"
               exact
               className="text-primary hover:text-primary/90 focus:text-primary/90"
               activeClassName="font-bold"
