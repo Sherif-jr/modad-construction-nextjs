@@ -75,7 +75,7 @@ const ProjectsTabs = () => {
                             elit. Aspernatur iusto dolor voluptate odio ipsam
                             quisquam quas nisi temporibus!
                           </p>
-                          <Link href={`/projects/${proj.id}`}>
+                          <Link href={`/projects/${proj.id}`} className="w-fit">
                             <Button
                               style={{ transitionDuration: "0.7s" }}
                               className="-translate-x-[200%] group-hover:translate-x-0 transition-all"
