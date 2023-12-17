@@ -7,10 +7,12 @@ interface NavLinkProps extends LinkProps {
   className?: string;
   activeClassName?: string;
   exact?: boolean;
+  activeStyle?: React.CSSProperties;
 }
 
 const NavLink: FC<PropsWithChildren<NavLinkProps>> = (props) => {
-  const { children, className, activeClassName, exact, href } = props;
+  const { children, className, activeClassName, exact, href, activeStyle } =
+    props;
   const pathname = usePathname();
   const isActive = exact
     ? pathname === href
@@ -18,7 +20,8 @@ const NavLink: FC<PropsWithChildren<NavLinkProps>> = (props) => {
   return (
     <Link
       href={href}
-      className={`${className && className} ${
+      style={isActive && activeStyle ? activeStyle : undefined}
+      className={`${className ? className : ""} ${
         isActive && activeClassName && activeClassName
       }`}
     >
