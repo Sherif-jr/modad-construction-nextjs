@@ -68,7 +68,7 @@ const ProjectsTabs = () => {
                         />
                         <div className="p-6 text-white relative z-[2] flex flex-col gap-2">
                           <h4 className="font-bold text-center text-xl -translate-x-[200%] group-hover:translate-x-0 transition-all duration-300">
-                            First Title
+                            {proj.name}
                           </h4>
                           <p className="text-xs -translate-x-[200%] group-hover:translate-x-0 transition-all duration-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing
