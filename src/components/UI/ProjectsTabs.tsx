@@ -70,14 +70,14 @@ const ProjectsTabs = () => {
                           <h4 className="font-bold text-center text-xl -translate-x-[200%] group-hover:translate-x-0 transition-all duration-300">
                             First Title
                           </h4>
-                          <p className="text-xs -translate-x-[200%] group-hover:translate-x-0 transition-all duration-700">
+                          <p className="text-xs -translate-x-[200%] group-hover:translate-x-0 transition-all duration-500">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Aspernatur iusto dolor voluptate odio ipsam
                             quisquam quas nisi temporibus!
                           </p>
                           <Link href={`/projects/${proj.id}`}>
                             <Button
-                              style={{ transitionDuration: "0.8s" }}
+                              style={{ transitionDuration: "0.7s" }}
                               className="-translate-x-[200%] group-hover:translate-x-0 transition-all"
                             >
                               View Details
