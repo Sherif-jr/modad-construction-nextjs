@@ -5,9 +5,7 @@
 html {
   scroll-behavior: smooth !important;
 }
-/* a {
-  color: inherit !important;
-} */
+
 @font-face {
   font-family: "mainMedium";
   src: url("/fonts/29LTZaridDisplay-Medium.otf");
@@ -58,4 +56,10 @@ html {
 
 .slick-disabled {
   opacity: 25%;
+}
+
+@media (max-width: 640px) {
+  .ant-tabs-nav-wrap {
+    justify-content: flex-start !important;
+  }
 }
