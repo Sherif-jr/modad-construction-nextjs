@@ -16,7 +16,16 @@ const NewsItems: MenuProps["items"] = [
 const Header = () => {
   const groupItems: MenuProps["items"] = companies.map((company) => ({
     key: company.path,
-    label: <Link href={`/our-group/${company.path}`}>{company.name}</Link>,
+    label: (
+      <NavLink
+        href={`/our-group/${company.path}`}
+        exact
+        activeStyle={{ color: "#CBA052" }}
+        activeClassName="text-primary font-bold"
+      >
+        {company.name}
+      </NavLink>
+    ),
   }));
   return (
     <header className="sticky z-50 top-0 left-0 w-full bg-black text-white h-16 px-4 lg:px-12">
@@ -60,7 +69,9 @@ const Header = () => {
               </Dropdown>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Link href="/careers">Careers</Link>
+              <NavLink href="/careers" exact activeClassName="text-primary">
+                Careers
+              </NavLink>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <Link href="#">Portals</Link>
