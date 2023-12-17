@@ -3,6 +3,7 @@ import AnimationWrapper from "@/components/UI/AnimationWrapper";
 import BreadCrumbs from "@/components/UI/BreadCrumbs";
 import { Button, Card, Select, Tabs } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectsPage = () => {
   return (
@@ -67,12 +68,16 @@ const ProjectsPage = () => {
                                     voluptate odio ipsam quisquam quas nisi
                                     temporibus!
                                   </p>
-                                  <Button
-                                    style={{ transitionDuration: "0.8s" }}
-                                    className="-translate-x-[200%] group-hover:translate-x-0 transition-all"
+                                  <Link
+                                    href={`/projects/${proj.id}`}
                                   >
-                                    View Details
-                                  </Button>
+                                    <Button
+                                      style={{ transitionDuration: "0.8s" }}
+                                      className="-translate-x-[200%] group-hover:translate-x-0 transition-all"
+                                    >
+                                      View Details
+                                    </Button>
+                                  </Link>
                                 </div>
                               </div>
                             </div>
