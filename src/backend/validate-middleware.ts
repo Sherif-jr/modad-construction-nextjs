@@ -1,4 +1,4 @@
-import joi from "joi";
+import joi, { ValidationErrorItem } from "joi";
 
 export { validateMiddleware };
 
@@ -16,7 +16,7 @@ async function validateMiddleware(req: Request, schema: joi.ObjectSchema) {
 
   if (error) {
     throw `Validation error: ${error.details
-      .map((x: Error) => x.message)
+      .map((x: ValidationErrorItem) => x.message)
       .join(", ")}`;
   }
 
