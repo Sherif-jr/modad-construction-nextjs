@@ -27,7 +27,7 @@ const ScrollToTop = () => {
       options={{ duration: 200 }}
     >
       <div
-        className=" flex justify-center items-center rounded-[50%] w-[50px] h-[50px] bg-black/30 text-white cursor-pointer z-10"
+        className=" flex justify-center items-center rounded-[50%] w-[50px] h-[50px] bg-primary/40 text-white cursor-pointer z-10"
         onClick={() => {
           window.scrollTo(0, 0);
         }}

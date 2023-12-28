@@ -1,6 +1,5 @@
 import { Button, Carousel } from "antd";
 import Image from "next/image";
-import { Collapse } from "antd";
 import HomeExpCard from "@/components/UI/HomeExpCard";
 import ProjectCard from "@/components/UI/ProjectCard";
 import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
@@ -253,11 +252,11 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-black">
-        <div className="container mx-auto py-12 px-2 xl:px-12">
+        <div className="container mx-auto py-12 px-2">
           <h2 className="text-primary text-2xl xl:text-3xl mb-6 xl:mb-12">
             Current Projects
           </h2>
-          <div className="w-full px-6">
+          <div className="w-full px-6 xl:px-12">
             <Carousel
               arrows
               dots={false}
@@ -320,7 +319,7 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-primary">
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto py-12 px-2">
           <div className="flex flex-col gap-12 px-1 md:px-0">
             <div>
               <h3 className="text-2xl xl:text-3xl">News</h3>

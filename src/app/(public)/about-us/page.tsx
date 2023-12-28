@@ -7,6 +7,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "antd";
 import { Metadata } from "next";
 import Image from "next/image";
+import logo1 from "@/assets/companiesLogos/Modad Consratuction-Black.svg";
+import logo2 from "@/assets/companiesLogos/Modad Properties-Black.svg";
+import logo3 from "@/assets/companiesLogos/Modad MEP-Black.svg";
+import logo4 from "@/assets/companiesLogos/Modad Smart Solutions-Black.svg";
+import logo5 from "@/assets/companiesLogos/Modad Fine Finishing-Black.svg";
+import logo6 from "@/assets/companiesLogos/Modad Charity Foundation-Black.svg";
+import Link from "next/link";
+import ServiceCard from "@/components/UI/ServiceCard";
 
 export const metadata: Metadata = {
   title: "Modad - About us",
@@ -49,22 +57,32 @@ const AboutUsPage = () => {
               </p>
             </div>
             <div className="">
-              <div className="relative aspect-square">
-                <Image
-                  src="/imgs/shutterstock_2145134953.jpg"
-                  alt=""
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <Carousel>
+                <div className="relative aspect-square">
+                  <Image
+                    src="/imgs/shutterstock_2145134953.jpg"
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square">
+                  <Image
+                    src="/imgs/shutterstock_2145134953.jpg"
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </Carousel>
             </div>
             <div></div>
           </div>
         </div>
       </main>
-      <section className="bg-primary">
+      <section className="bg-black">
         <div className="container mx-auto py-24 px-6 md:px-0">
-          <p className="mb-16 text-center">
+          <p className="mb-16 text-center text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
             cumque laboriosam nulla eligendi perspiciatis suscipit eius
             blanditiis vitae, aut ea voluptatum excepturi voluptates aliquam,
@@ -72,19 +90,19 @@ const AboutUsPage = () => {
             accusantium beatae.
           </p>
           <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
-            <div className="border-black border-4 p-5 sm:p-12">
+            <div className="border-primary border-4 p-5 sm:p-12">
               <div className="flex mb-6">
                 <FontAwesomeIcon
                   icon={faEye}
-                  className="text-white text-8xl me-4"
+                  className="text-primary text-8xl me-4"
                 />
                 <h3 className="text-5xl font-bold uppercase">
-                  <span className="block text-black">Our</span>
-                  <span className="block text-white">Vision</span>
+                  <span className="block text-white">Our</span>
+                  <span className="block text-primary">Vision</span>
                 </h3>
               </div>
               <div>
-                <p className="text-justify">
+                <p className="text-justify text-white">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Natus exercitationem incidunt ducimus magnam perspiciatis
                   corrupti? Quibusdam facere natus aliquid eveniet, impedit
@@ -97,19 +115,19 @@ const AboutUsPage = () => {
                 </p>
               </div>
             </div>
-            <div className="border-black border-4 p-5 sm:p-12">
+            <div className="border-primary border-4 p-5 sm:p-12">
               <div className="flex mb-6">
                 <FontAwesomeIcon
                   icon={faBullseye}
-                  className="text-white text-8xl me-4"
+                  className="text-primary text-8xl me-4"
                 />
                 <h3 className="text-5xl font-bold uppercase">
-                  <span className="block text-black">Our</span>
-                  <span className="block text-white">Mission</span>
+                  <span className="block text-white">Our</span>
+                  <span className="block text-primary">Mission</span>
                 </h3>
               </div>
               <div>
-                <p className="text-justify">
+                <p className="text-justify text-white">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Natus exercitationem incidunt ducimus magnam perspiciatis
                   corrupti? Quibusdam facere natus aliquid eveniet, impedit
@@ -121,45 +139,6 @@ const AboutUsPage = () => {
                   cumque nobis ipsum. A, iste.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-black">
-        <div className="container mx-auto py-24 px-6 md:px-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="relative aspect-square">
-              <Image
-                src="/Chairman.jpg"
-                alt=""
-                className="grayscale object-cover"
-                fill
-              />
-            </div>
-            <div>
-              <h3 className="text-white text-3xl font-bold mb-8">
-                Chairman message
-              </h3>
-              <p className="text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                sed provident labore voluptates reprehenderit aliquam vel
-                ducimus, ullam quod aut doloremque quisquam debitis laborum, ea
-                voluptatum obcaecati, officia ratione cupiditate. Quam,
-                veritatis? Aspernatur culpa aperiam qui consequuntur, nam harum
-                architecto accusamus cumque distinctio voluptas, totam
-                necessitatibus maxime maiores iste? Enim temporibus neque quod
-                aliquid, ipsam velit sequi? Dolores at minima numquam pariatur.
-                Magni, soluta praesentium. Deleniti eius provident sed
-                temporibus nostrum nam officiis ab corporis. Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Ipsam sed provident
-                labore voluptates reprehenderit aliquam vel ducimus, ullam quod
-                aut doloremque quisquam debitis laborum, ea voluptatum
-                obcaecati, officia ratione cupiditate. Quam, veritatis?
-                Aspernatur culpa aperiam qui consequuntur, nam harum architecto
-                accusamus cumque distinctio voluptas, totam necessitatibus
-                maxime maiores iste? Enim temporibus neque quod aliquid, ipsam
-                velit sequi?
-              </p>
             </div>
           </div>
         </div>
@@ -178,7 +157,6 @@ const AboutUsPage = () => {
           <div className="py-12 px-0 md:px-10 lg:px-12 xl:px-0">
             <Carousel
               autoplay
-              autoplaySpeed={1500}
               dots={false}
               arrows
               prevArrow={
@@ -195,67 +173,105 @@ const AboutUsPage = () => {
                   iconClassName="text-xl text-black select-none"
                 />
               }
-              slidesToShow={6}
+              slidesToShow={3}
               responsive={[
                 { breakpoint: 640, settings: { slidesToShow: 1 } },
                 { breakpoint: 767, settings: { slidesToShow: 2 } },
                 { breakpoint: 1024, settings: { slidesToShow: 3 } },
-                { breakpoint: 1279, settings: { slidesToShow: 5 } },
               ]}
               className="text-black"
             >
-              <div>
-                <HomeExpCard
-                  title="MODAD Group"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
-              <div>
-                <HomeExpCard
-                  title="MODAD Construction"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
-              <div>
-                <HomeExpCard
-                  title="MODAD Properties"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
-              <div>
-                <HomeExpCard
-                  title="MODAD MEP"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
-              <div>
-                <HomeExpCard
-                  title="MODAD Smart Solutions"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
-              <div>
-                <HomeExpCard
-                  title="MODAD Fine Finishing"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
-              <div>
-                <HomeExpCard
-                  title="MODAD Foundation"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
-                  imgSrc="/imgs/shutterstock_1411133069.jpg"
-                />
-              </div>
+              <Link href="/our-group/modad-construction" className="px-4">
+                <div className="h-[200px] relative">
+                  <Image
+                    fill
+                    src={logo1}
+                    alt="MODAD Constructions"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              <Link href="/our-group/modad-properties" className="px-4">
+                <div className="h-[200px] relative">
+                  <Image
+                    fill
+                    src={logo2}
+                    alt="MODAD Properties"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              <Link href="/our-group/modad-mep" className="px-4">
+                <div className="h-[200px] relative">
+                  <Image
+                    fill
+                    src={logo3}
+                    alt="MODAD MEP"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              <Link href="/our-group/modad-smart-solutions" className="px-4">
+                <div className="h-[200px] relative">
+                  <Image
+                    fill
+                    src={logo4}
+                    alt="MODAD Smart Solutions"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              <Link href="/our-group/modad-fine-finishing" className="px-4">
+                <div className="h-[200px] relative">
+                  <Image
+                    fill
+                    src={logo5}
+                    alt="MODAD Fine Finishings"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
+              <Link href="/modad-foundation" className="px-4">
+                <div className="h-[200px] relative">
+                  <Image
+                    fill
+                    src={logo6}
+                    alt="MODAD Foundation"
+                    className="object-contain"
+                  />
+                </div>
+              </Link>
             </Carousel>
           </div>
-          {/* <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12"></div> */}
+        </div>
+      </section>
+      <section className="bg-black">
+        <div className="container mx-auto py-12">
+          <h2 className="text-white text-xl sm:text-3xl font-bold text-center mb-12">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
+            <ServiceCard
+              imgLink="/imgs/shutterstock_697100377.jpg"
+              title="CONSULTING"
+              description="Our consulting services offer you ease of mind, as we oversee the entire process. Beginning with the documentation and paperwork to the creation of a project plan, we can get it done from start to finish. Meeting our clients’ needs and exceeding their expectations."
+            />
+            <ServiceCard
+              imgLink="/imgs/shutterstock_707662543.jpg"
+              title="ARCHITECTURE"
+              description="An idea cannot become reality unless it is designed properly. Our skilled and experienced architects are talented, highly trained, and equipped with the latest technology. They are the ones that turn your vision into reality by transforming your ideas into tangible plans and designs."
+            />
+            <ServiceCard
+              imgLink="/imgs/shutterstock_1067925506.jpg"
+              title="CONSTRUCTION"
+              description="MODAD Construction stands as your comprehensive solution for construction requirements, adept at handling projects of various scales. Whether it's a small-scale initiative or a large corporate complex, our expertise extends to diverse construction needs. From intricate roadwork to the development of expansive corporate complexes, MODAD Construction ensures excellence and precision in every facet of the construction process."
+            />
+            <ServiceCard
+              imgLink="/imgs/shutterstock_1411133069.jpg"
+              title="RENOVATIONS"
+              description="We can deliver renovation projects of any scale, at the highest standards of quality. We offer a full service starting from planning, architecture, tiling, painting, woodwork, and stonework. We can work hand in hand with our clients every step of the way."
+            />
+          </div>
         </div>
       </section>
     </>

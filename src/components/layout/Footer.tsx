@@ -52,36 +52,38 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col items-center gap-5">
-            <p className="uppercase font-bold text-xl">Contact with us</p>
+          <div className="flex flex-col items-center md gap-5">
             <div>
-              <FooterContactForm />
-            </div>
-            <div className="flex gap-2 justify-evenly items-center w-48 md:w-40 lg:w-48">
-              <Link
-                href="/"
-                className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
-              >
-                <FontAwesomeIcon icon={faInstagram} />
-              </Link>
-              <Link
-                href="/"
-                className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
-              >
-                <FontAwesomeIcon icon={faFacebookF} />
-              </Link>
-              <Link
-                href="/"
-                className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
-              >
-                <FontAwesomeIcon icon={faXTwitter} />
-              </Link>
-              <Link
-                href="/"
-                className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
-              >
-                <FontAwesomeIcon icon={faYoutube} />
-              </Link>
+              <p className="uppercase font-bold text-xl">Contact with us</p>
+              <div>
+                <FooterContactForm />
+              </div>
+              <div className="flex gap-2 justify-evenly items-center w-48 md:w-40 lg:w-48">
+                <Link
+                  href="/"
+                  className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </Link>
+                <Link
+                  href="/"
+                  className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
+                >
+                  <FontAwesomeIcon icon={faFacebookF} />
+                </Link>
+                <Link
+                  href="/"
+                  className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
+                >
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </Link>
+                <Link
+                  href="/"
+                  className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
+                >
+                  <FontAwesomeIcon icon={faYoutube} />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

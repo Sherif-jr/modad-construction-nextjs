@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import StyledComponentsRegistry from "../lib/AntdRegistry";
+import "../globals.css";
 import Header from "@/components/layout/Header";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Footer from "@/components/layout/Footer";
-import { ConfigProvider, theme } from "antd";
 import Providers from "@/lib/Providers";
 import ScrollToTop from "@/components/UI/ScrollToTop";
 config.autoAddCss = false;
@@ -22,7 +20,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { darkAlgorithm } = theme;
   return (
     <html lang="en">
       <body className={inter.className}>
