@@ -52,7 +52,7 @@ const Header = () => {
                 }}
               >
                 <span>
-                  <NavLink href="#" exact activeClassName="text-primary">
+                  <NavLink href="/our-group" exact activeClassName="text-primary">
                     Our Group
                   </NavLink>
                 </span>
