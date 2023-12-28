@@ -250,27 +250,48 @@ const AboutUsPage = () => {
           <h2 className="text-white text-xl sm:text-3xl font-bold text-center mb-12">
             Our Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
-            <ServiceCard
-              imgLink="/imgs/shutterstock_697100377.jpg"
-              title="CONSULTING"
-              description="Our consulting services offer you ease of mind, as we oversee the entire process. Beginning with the documentation and paperwork to the creation of a project plan, we can get it done from start to finish. Meeting our clients’ needs and exceeding their expectations."
-            />
-            <ServiceCard
-              imgLink="/imgs/shutterstock_707662543.jpg"
-              title="ARCHITECTURE"
-              description="An idea cannot become reality unless it is designed properly. Our skilled and experienced architects are talented, highly trained, and equipped with the latest technology. They are the ones that turn your vision into reality by transforming your ideas into tangible plans and designs."
-            />
-            <ServiceCard
-              imgLink="/imgs/shutterstock_1067925506.jpg"
-              title="CONSTRUCTION"
-              description="MODAD Construction stands as your comprehensive solution for construction requirements, adept at handling projects of various scales. Whether it's a small-scale initiative or a large corporate complex, our expertise extends to diverse construction needs. From intricate roadwork to the development of expansive corporate complexes, MODAD Construction ensures excellence and precision in every facet of the construction process."
-            />
-            <ServiceCard
-              imgLink="/imgs/shutterstock_1411133069.jpg"
-              title="RENOVATIONS"
-              description="We can deliver renovation projects of any scale, at the highest standards of quality. We offer a full service starting from planning, architecture, tiling, painting, woodwork, and stonework. We can work hand in hand with our clients every step of the way."
-            />
+          <div className="px-8">
+            <Carousel
+              responsive={[{ breakpoint: 1024, settings: { slidesToShow: 1 } }]}
+              slidesToShow={2}
+              dots={false}
+              arrows
+              prevArrow={
+                <CXALeft left={-5} iconClassName="text-xl select-none" />
+              }
+              nextArrow={
+                <CXARight right={-5} iconClassName="text-xl select-none" />
+              }
+            >
+              <div className="p-4">
+                <ServiceCard
+                  imgLink="/imgs/shutterstock_697100377.jpg"
+                  title="CONSULTING"
+                  description="Our consulting services offer you ease of mind, as we oversee the entire process. Beginning with the documentation and paperwork to the creation of a project plan, we can get it done from start to finish. Meeting our clients’ needs and exceeding their expectations."
+                />
+              </div>
+              <div className="p-4">
+                <ServiceCard
+                  imgLink="/imgs/shutterstock_707662543.jpg"
+                  title="ARCHITECTURE"
+                  description="An idea cannot become reality unless it is designed properly. Our skilled and experienced architects are talented, highly trained, and equipped with the latest technology. They are the ones that turn your vision into reality by transforming your ideas into tangible plans and designs."
+                />
+              </div>
+              <div className="p-4">
+                <ServiceCard
+                  imgLink="/imgs/shutterstock_1067925506.jpg"
+                  title="CONSTRUCTION"
+                  description="MODAD Construction stands as your comprehensive solution for construction requirements, adept at handling projects of various scales. Whether it's a small-scale initiative or a large corporate complex, our expertise extends to diverse construction needs. From intricate roadwork to the development of expansive corporate complexes, MODAD Construction ensures excellence and precision in every facet of the construction process."
+                />
+              </div>
+              <div className="p-4">
+                <ServiceCard
+                  imgLink="/imgs/shutterstock_1411133069.jpg"
+                  title="RENOVATIONS"
+                  description="We can deliver renovation projects of any scale, at the highest standards of quality. We offer a full service starting from planning, architecture, tiling, painting, woodwork, and stonework. We can work hand in hand with our clients every step of the way."
+                />
+              </div>
+            </Carousel>
           </div>
         </div>
       </section>
