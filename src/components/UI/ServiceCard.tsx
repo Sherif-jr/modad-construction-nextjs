@@ -21,7 +21,7 @@ const ServiceCard = ({
         <div className="absolute top-0 left-0 w-full h-full bg-transparent group-hover:bg-black/20 transition-all duration-300" />
       </div>
       <div className="mt-6 text-white">
-        <h3 className="uppercase">{title}</h3>
+        <h3 className="uppercase font-bold">{title}</h3>
         <div className="bg-primary w-[50px] h-[3px] my-4 group-hover:w-[150px] transition-all duration-300" />
         <p className="text-xs">{description}</p>
       </div>
