@@ -14,7 +14,7 @@ const OurGroupPage = () => {
         ]}
       />
       <main className="bg-black text-white">
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto py-12 md:px-6 lg:px-0">
           <div className="w-full flex flex-col gap-4 items-center">
             <h1 className="text-2xl font-bold uppercase">Our Group</h1>
             <p className=" text-white/90 max-w-2xl text-sm">

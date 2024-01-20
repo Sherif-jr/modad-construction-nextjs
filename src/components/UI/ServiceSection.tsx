@@ -50,7 +50,7 @@ const ServiceSection = ({
 }: IServiceSectionProps) => {
   return (
     <section className="h-[450px] w-full">
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto py-12 md:px-6 lg:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             {isImageOnLeft ? (

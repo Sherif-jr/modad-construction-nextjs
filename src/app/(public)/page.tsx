@@ -256,7 +256,7 @@ export default function Home() {
           <h2 className="text-primary text-2xl xl:text-3xl mb-6 xl:mb-12">
             Current Projects
           </h2>
-          <div className="w-full px-6 xl:px-12">
+          <div className="w-full px-6 md:px-12 lg:px-6 xl:px-12">
             <Carousel
               arrows
               dots={false}
