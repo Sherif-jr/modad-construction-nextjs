@@ -10,7 +10,19 @@ import { companies } from "@/_staticData/basicDetails";
 
 const NewsItems: MenuProps["items"] = [
   { key: "articles", label: "Article" },
-  { key: "newsletter", label: "Newsletter" },
+  {
+    key: "newsletter",
+    label: (
+      <NavLink
+        exact
+        href="/newsletter"
+        activeStyle={{ color: "#CBA052" }}
+        activeClassName="text-primary font-bold"
+      >
+        Newsletter
+      </NavLink>
+    ),
+  },
 ];
 
 const Header = () => {
@@ -65,7 +77,7 @@ const Header = () => {
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <Dropdown menu={{ items: NewsItems }}>
-                <Link href="#">News</Link>
+                <Link href="/news">News</Link>
               </Dropdown>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">

@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 
 import { auth } from "./helper/auth";
+import publicURL from "./publicURLs";
+import { cookies } from "next/headers";
 
 export { jwtMiddleware };
 
@@ -14,10 +16,5 @@ async function jwtMiddleware(req: NextRequest) {
 
 function isPublicPath(req: NextRequest) {
   // public routes that don't require authentication
-  const publicPaths = [
-    "POST:/api/account/login",
-    "POST:/api/account/logout",
-    "POST:/api/account/register",
-  ];
-  return publicPaths.includes(`${req.method}:${req.nextUrl.pathname}`);
+  return publicURL.includes(`${req.method}:${req.nextUrl.pathname}`);
 }

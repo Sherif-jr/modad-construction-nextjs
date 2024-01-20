@@ -15,18 +15,29 @@ function apiHandler(handler: any) {
 
     wrappedHandler[method] = async (req: NextRequest, ...args: any) => {
       try {
-        // monkey patch req.json() because it can only be called once
-        const json = await req.json();
-        req.json = () => json;
-      } catch {}
+        // monkey patch req.json() because it can only be called once if req should be validated
+
+        if (handler[method].schema) {
+          const json = await req.json();
+          req.json = () => json;
+        }
+      } catch (err) {
+        return NextResponse.json(
+          { success: false, message: "Body should not be empty" },
+          { status: 400 }
+        );
+      }
 
       try {
         // global middleware
         await jwtMiddleware(req);
-        await validateMiddleware(req, handler[method].schema);
+        if (handler[method].schema) {
+          await validateMiddleware(req, handler[method].schema);
+        }
 
         // route handler
         const responseBody = await handler[method](req, ...args);
+
         return NextResponse.json(responseBody || {});
       } catch (err: any) {
         // global error handler
