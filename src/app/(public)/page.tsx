@@ -6,7 +6,19 @@ import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import CXARight from "@/components/UI/CarouselXArrows/CXARight";
 import ReadMoreCollapse from "@/components/UI/ReadMoreCollapse";
-export default function Home() {
+
+const fetchHome = async () => {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URI}api/edit-website/home`
+  );
+  const data = await res.json();
+  return data.data || {};
+};
+
+export default async function Home() {
+  const data = await fetchHome();
+  console.log(data);
+
   return (
     <>
       <main className=" xl:min-h-[90vh] xl:max-h-screen">
@@ -15,20 +27,43 @@ export default function Home() {
             slidesToShow={1}
             slidesToScroll={1}
             dots={{ className: "bottom-6" }}
-            autoplay={true}
             pauseOnFocus={false}
             pauseOnHover={false}
             pauseOnDotsHover={false}
             infinite
           >
             <div className="aspect-video xl:max-h-screen relative">
-              <Image
-                src="/imgs/shutterstock_2212033973.jpg"
-                alt=""
-                className="w-full object-cover"
-                fill
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube-nocookie.com/embed/bY7_wrd21iE?version=3&amp;enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;showinfo=0&amp;rel=0&amp;origin=https://modad-construction.com;&amp;controls=0&amp;playsinline=1&autoplay=1&mute=1&controls=0&loop=1&showinfo=0&fs=1"
+                title="12 Years Of Dreams"
+                frameBorder="0"
+                allow="autoplay; fullscreen"
+                style={{
+                  opacity: 1,
+                  visibility: "visible",
+                  width: "133.333%",
+                  height: "100%",
+                  maxHeight: "none",
+                  maxWidth: "none",
+                  position: "absolute",
+                  top: "0px",
+                  left: "-16.6667%",
+                  display: "block",
+                }}
               />
-              <div className="relative w-full h-full flex items-center justify-center text-white">
+              {/* <iframe
+                allow="autoplay; fullscreen"
+                type="text/html"
+                src="https://www.youtube-nocookie.com/embed/bY7_wrd21iE?version=3&amp;enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;showinfo=0&amp;rel=0&amp;origin=https://modad-construction.com;&amp;controls=0&amp;playsinline=1"
+                width="100%"
+                height="100%"
+                class="intrinsic-ignore"
+                id="iframe6536"
+                title="12 Years Of Dreams"
+              ></iframe> */}
+              {/* <div className="relative w-full h-full flex items-center justify-center text-white">
                 <div className="mr-12 w-full sm:w-[500px] px-4">
                   <h2 className="uppercase text-3xl sm:text-7xl lg:text-9xl font-bold">
                     title
@@ -48,9 +83,9 @@ export default function Home() {
                     Learn More
                   </Button>
                 </div>
-              </div>
+              </div> */}
             </div>
-            <div className="aspect-video relative xl:max-h-screen">
+            {/* <div className="aspect-video relative xl:max-h-screen">
               <Image
                 src="/imgs/shutterstock_1067925506.jpg"
                 alt=""
@@ -107,7 +142,7 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </Carousel>
         </div>
       </main>
@@ -119,10 +154,11 @@ export default function Home() {
                 Chairman message
               </h2>
               <p className="text-white">
-                I am privileged and honored to be introducing MODAD
-                Construction. Nowadays to operate successfully in a rapidly
-                changing market dynamic we have developed a work ethic centered
-                around...
+                It is with great pleasure and gratitude that I welcome you to
+                the world of MODAD Group of Companies. Since our humble
+                beginnings in 2011, we have strived relentlessly to build a
+                legacy of excellence, innovation, and unwavering commitment to
+                our clients and stakeholders...
               </p>
               <ReadMoreCollapse
                 content="Agility drives our continuous success as today’s market is rapidly
@@ -166,43 +202,37 @@ export default function Home() {
           <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
             <HomeExpCard
               title="MODAD Group"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             <HomeExpCard
               title="MODAD Construction"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             <HomeExpCard
               title="MODAD Properties"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             <HomeExpCard
               title="MODAD MEP"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             <HomeExpCard
               title="MODAD Smart Solutions"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             <HomeExpCard
               title="MODAD Fine Finishing"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             <HomeExpCard
               title="MODAD Foundation"
-              description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus iure accusantium."
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
           </div>
         </div>
       </section>
-      <section>
+      {/* highlights */}
+      {/* <section>
         <div className="w-full aspect-video">
           <Carousel
             dots={false}
@@ -250,7 +280,7 @@ export default function Home() {
             </div>
           </Carousel>
         </div>
-      </section>
+      </section> */}
       <section className="bg-black">
         <div className="container mx-auto py-12 px-2">
           <h2 className="text-primary text-2xl xl:text-3xl mb-6 xl:mb-12">
@@ -405,19 +435,15 @@ export default function Home() {
           <h3 className="text-3xl mb-6">Corporate Responsibility</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]">
             <div className="text-white p-4 flex flex-col justify-center">
-              <h4 className="text-xl font-bold mb-4">LOREM IPSUM DOLOR </h4>
+              <h4 className="text-xl font-bold mb-4">Impact...</h4>
               <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet doloreolore eu
-                feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                dignissim qui blandit praesent luptatum zzril delenit augue duis
-                dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem
-                ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh
+                Committed to making a meaningful impact, We strive to give back
+                to the community and uplift the lives of the less fortunate.
+                Renovation of slums and uplifting living conditions is at the
+                core of our initiatives. We work tirelessly to create safe,
+                dignified living spaces, and transform adversity into hope for
+                those facing challenging circumstances; bringing back the
+                concept of “Home”.
               </p>
             </div>
             <div className="grid grid-cols-2 grid-rows-2 px-4 lg:px-0 lg:gap-8">

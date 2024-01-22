@@ -6,7 +6,7 @@ const HomeExpCard = ({
   imgSrc,
 }: {
   title: string;
-  description: string;
+  description?: string;
   imgSrc: string;
 }) => {
   const titleArr = title.split(" ");
@@ -22,7 +22,7 @@ const HomeExpCard = ({
         <span className="block">{titleArr[0]}</span>
         <span className="block">{titleArr.slice(1).join(" ")}</span>
       </h3>
-      <p className="mt-3 text-sm px-2">{description}</p>
+      {description && <p className="mt-3 text-sm px-2">{description}</p>}
     </div>
   );
 };

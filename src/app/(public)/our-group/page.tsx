@@ -18,10 +18,13 @@ const OurGroupPage = () => {
           <div className="w-full flex flex-col gap-4 items-center">
             <h1 className="text-2xl font-bold uppercase">Our Group</h1>
             <p className=" text-white/90 max-w-2xl text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
-              cum velit quam exercitationem recusandae minus cupiditate iure
-              nulla architecto nobis! Delectus error debitis inventore nam magni
-              ratione doloremque culpa blanditiis?
+              Welcome to MODAD Group, a dynamic conglomerate built on the
+              pillars of passion, innovation, and excellence. Since our
+              inception in 2011, we have been at the forefront of the
+              construction, real estate, MEP services, and smart solutions
+              industries, shaping a better tomorrow for communities worldwide.
+              MODAD Group is divided into 7 subsidiaries, in which each is
+              specialized or serves in a different yet crossed sector:
             </p>
           </div>
         </div>

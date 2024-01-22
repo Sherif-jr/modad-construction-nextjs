@@ -41,19 +41,28 @@ const AboutUsPage = () => {
           <h3 className="text-3xl font-bold mb-6">MODAD</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]">
             <div className="text-white p-4 flex flex-col justify-center">
-              <h4 className="text-xl font-bold mb-4">LOREM IPSUM DOLOR </h4>
+              <h4 className="text-xl font-bold mb-4 uppercase">
+                Welcome to MODAD Group
+              </h4>
               <p className="text-lg">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet doloreolore eu
-                feugiat nulla facilisis at vero eros et accumsan et iusto odio
-                dignissim qui blandit praesent luptatum zzril delenit augue duis
-                dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
-                cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
-                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem
-                ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                nonummy nibh
+                A dynamic conglomerate built on the pillars of passion,
+                innovation, and excellence. Since our inception in 2011, we have
+                been at the forefront of the construction, real estate, MEP
+                services, and smart solutions industries, shaping a better
+                tomorrow for communities worldwide. Led by visionary Founder and
+                Chairman, Engineer Mohamed El-Haddad, our group is driven by a
+                steadfast commitment to delivering exceptional engineering
+                solutions and infrastructure development. With over 12 years of
+                expertise and a growing portfolio of successful projects, we
+                have earned the trust of clients and investors alike. From Real
+                Estate Development, Construction services, Electromechanical
+                services, Fine Finishing, to smart solutions. our diverse range
+                of companies provides comprehensive solutions tailored to the
+                unique needs of our clients. Join us on a remarkable journey of
+                engineering excellence, sustainable development, and meaningful
+                contributions to society. At MODAD Group, we are more than just
+                a conglomerate; we are a force shaping a brighter, more
+                prosperous future for generations to come.
               </p>
             </div>
             <div className="">
@@ -103,15 +112,8 @@ const AboutUsPage = () => {
               </div>
               <div>
                 <p className="text-justify text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Natus exercitationem incidunt ducimus magnam perspiciatis
-                  corrupti? Quibusdam facere natus aliquid eveniet, impedit
-                  autem ut ad enim, quasi veritatis, saepe suscipit molestias
-                  quam harum nesciunt optio! Nulla et tempore exercitationem
-                  necessitatibus adipisci rerum nostrum quo ab iusto. Eos minima
-                  dolore quos! Deleniti aliquam, quo dolorum eum ad porro ex et
-                  dolorem assumenda voluptatem modi quasi blanditiis quaerat
-                  cumque nobis ipsum. A, iste.
+                  We envision a future where engineering brilliance meets human
+                  potential, creating a better world for generations to come.
                 </p>
               </div>
             </div>
@@ -128,15 +130,8 @@ const AboutUsPage = () => {
               </div>
               <div>
                 <p className="text-justify text-white">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Natus exercitationem incidunt ducimus magnam perspiciatis
-                  corrupti? Quibusdam facere natus aliquid eveniet, impedit
-                  autem ut ad enim, quasi veritatis, saepe suscipit molestias
-                  quam harum nesciunt optio! Nulla et tempore exercitationem
-                  necessitatibus adipisci rerum nostrum quo ab iusto. Eos minima
-                  dolore quos! Deleniti aliquam, quo dolorum eum ad porro ex et
-                  dolorem assumenda voluptatem modi quasi blanditiis quaerat
-                  cumque nobis ipsum. A, iste.
+                  We are driven to build a brighter, more prosperous future,
+                  leaving an indelible mark of excellence on the world stage.
                 </p>
               </div>
             </div>
@@ -149,99 +144,43 @@ const AboutUsPage = () => {
             OUR GROUP
           </h2>
           <p className="text-center mt-4 text-sm max-w-[1024px] mx-auto">
-            We have succeeded in establishing our name as market leader in the
-            construction, and engineering solutions industry. We serve a wide
-            range of sectors including but not limited to commercial, banking,
-            administrative, hospitality, and residential.
+            Welcome to MODAD Group, a dynamic conglomerate built on the pillars
+            of passion, innovation, and excellence. Since our inception in 2011,
+            we have been at the forefront of the construction, real estate, MEP
+            services, and smart solutions industries, shaping a better tomorrow
+            for communities worldwide. MODAD Group is divided into 7
+            subsidiaries, in which each is specialized or serves in a different
+            yet crossed sector:
           </p>
-          <div className="py-12 px-0 md:px-10 lg:px-12 xl:px-0">
-            <Carousel
-              autoplay
-              dots={false}
-              arrows
-              prevArrow={
-                <CXALeft
-                  xsLeft={-10}
-                  left={-5}
-                  iconClassName="text-xl text-black select-none"
-                />
-              }
-              nextArrow={
-                <CXARight
-                  xsRight={-10}
-                  right={-5}
-                  iconClassName="text-xl text-black select-none"
-                />
-              }
-              slidesToShow={3}
-              responsive={[
-                { breakpoint: 640, settings: { slidesToShow: 1 } },
-                { breakpoint: 767, settings: { slidesToShow: 2 } },
-                { breakpoint: 1024, settings: { slidesToShow: 3 } },
-              ]}
-              className="text-black"
-            >
-              <Link href="/our-group/modad-construction" className="px-4">
-                <div className="h-[200px] relative">
-                  <Image
-                    fill
-                    src={logo1}
-                    alt="MODAD Constructions"
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-              <Link href="/our-group/modad-properties" className="px-4">
-                <div className="h-[200px] relative">
-                  <Image
-                    fill
-                    src={logo2}
-                    alt="MODAD Properties"
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-              <Link href="/our-group/modad-mep" className="px-4">
-                <div className="h-[200px] relative">
-                  <Image
-                    fill
-                    src={logo3}
-                    alt="MODAD MEP"
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-              <Link href="/our-group/modad-smart-solutions" className="px-4">
-                <div className="h-[200px] relative">
-                  <Image
-                    fill
-                    src={logo4}
-                    alt="MODAD Smart Solutions"
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-              <Link href="/our-group/modad-fine-finishing" className="px-4">
-                <div className="h-[200px] relative">
-                  <Image
-                    fill
-                    src={logo5}
-                    alt="MODAD Fine Finishings"
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-              <Link href="/modad-foundation" className="px-4">
-                <div className="h-[200px] relative">
-                  <Image
-                    fill
-                    src={logo6}
-                    alt="MODAD Foundation"
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
-            </Carousel>
+          <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
+            <HomeExpCard
+              title="MODAD Group"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
+            <HomeExpCard
+              title="MODAD Construction"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
+            <HomeExpCard
+              title="MODAD Properties"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
+            <HomeExpCard
+              title="MODAD MEP"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
+            <HomeExpCard
+              title="MODAD Smart Solutions"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
+            <HomeExpCard
+              title="MODAD Fine Finishing"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
+            <HomeExpCard
+              title="MODAD Foundation"
+              imgSrc="/imgs/shutterstock_1411133069.jpg"
+            />
           </div>
         </div>
       </section>
