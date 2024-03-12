@@ -2,7 +2,13 @@
 import { useState } from "react";
 import { Collapse } from "antd";
 
-const ReadMoreCollapse = ({ content }: { content: string }) => {
+const ReadMoreCollapse = ({
+  content,
+  signature,
+}: {
+  content: string;
+  signature?: string;
+}) => {
   const [collapsed, setCollapsed] = useState(true);
   return (
     <Collapse
@@ -23,7 +29,12 @@ const ReadMoreCollapse = ({ content }: { content: string }) => {
             </button>
           ),
           showArrow: false,
-          children: <p className="text-white">{content}</p>,
+          children: (
+            <>
+              <p className="text-white">{content}</p>
+              {signature && <p className="text-white font-bold">{signature}</p>}
+            </>
+          ),
         },
       ]}
     />

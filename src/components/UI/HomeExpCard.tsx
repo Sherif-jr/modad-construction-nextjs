@@ -5,11 +5,11 @@ const HomeExpCard = ({
   description,
   imgSrc,
 }: {
-  title: string;
+  title?: string;
   description?: string;
   imgSrc: string;
 }) => {
-  const titleArr = title.split(" ");
+  const titleArr = title?.split(" ");
   return (
     <div>
       <div className="relative w-full h-[200px] overflow-hidden">
@@ -18,10 +18,12 @@ const HomeExpCard = ({
           <div className=" w-[30px] h-full bg-gradient-to-r from-[#373737] to-[#231f20] ms-auto"></div>
         </div>
       </div>
-      <h3 className="text-primary text-center mt-4 font-medium">
-        <span className="block">{titleArr[0]}</span>
-        <span className="block">{titleArr.slice(1).join(" ")}</span>
-      </h3>
+      {titleArr && (
+        <h3 className="text-primary text-center mt-4 font-medium">
+          <span className="block">{titleArr[0]}</span>
+          <span className="block">{titleArr.slice(1).join(" ")}</span>
+        </h3>
+      )}
       {description && <p className="mt-3 text-sm px-2">{description}</p>}
     </div>
   );
