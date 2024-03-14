@@ -1,6 +1,12 @@
 import { companies } from "@/_staticData/basicDetails";
 import BreadCrumbs from "@/components/UI/BreadCrumbs";
-import ServiceSection from "@/components/UI/ServiceSection";
+import dynamic from "next/dynamic";
+// import ServiceSection from "@/components/UI/ServiceSection";
+
+const ServiceSection = dynamic(() => import("@/components/UI/ServiceSection"), {
+  ssr: false,
+  
+});
 
 const OurGroupPage = () => {
   return (
