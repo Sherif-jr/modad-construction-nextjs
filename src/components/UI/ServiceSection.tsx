@@ -55,6 +55,7 @@ const ServiceSection = ({
   text,
   buttonLink,
 }: IServiceSectionProps) => {
+  //@ts-ignore
   const md = window?.matchMedia(screenSizes.MD).matches;
 
   return (
