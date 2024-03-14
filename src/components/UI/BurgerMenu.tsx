@@ -6,9 +6,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import NavLink from "../NavLink";
 import { usePathname } from "next/navigation";
-enum screenSizes {
-  LG = "(max-width: 1024px)",
-}
+import { screenSizes } from "@/constants/enums";
+
 const BurgerMenu = () => {
   const [drawerOpen, setDrawer] = useState<boolean>(false);
   const pathname = usePathname();

@@ -149,7 +149,7 @@ const AboutUsPage = () => {
                 alt=""
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain w-[50px] h-[50px]"
               />
               <h4 className="text-lg font-bold">Quality</h4>
               <p className="text-sm text-gray-700">
@@ -162,11 +162,11 @@ const AboutUsPage = () => {
             </div>
             <div className="flex flex-col gap-2 p-4">
               <Image
-                src="/icons/quality.svg"
+                src="/icons/credibility.svg"
                 alt=""
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain w-[50px] h-[50px]"
               />
               <h4 className="text-lg font-bold">Credibility</h4>
               <p className="text-sm text-gray-700">
@@ -179,11 +179,11 @@ const AboutUsPage = () => {
             </div>
             <div className="flex flex-col gap-2 p-4">
               <Image
-                src="/icons/quality.svg"
+                src="/icons/honesty.svg"
                 alt=""
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain w-[50px] h-[50px]"
               />
               <h4 className="text-lg font-bold">Honesty</h4>
               <p className="text-sm text-gray-700">
@@ -195,11 +195,11 @@ const AboutUsPage = () => {
             </div>
             <div className="flex flex-col gap-2 p-4">
               <Image
-                src="/icons/quality.svg"
+                src="/icons/diversity.svg"
                 alt=""
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain w-[50px] h-[50px]"
               />
               <h4 className="text-lg font-bold">Diversity and Respect</h4>
               <p className="text-sm text-gray-700">
@@ -213,11 +213,11 @@ const AboutUsPage = () => {
             </div>
             <div className="flex flex-col gap-2 p-4">
               <Image
-                src="/icons/quality.svg"
+                src="/icons/commitment.svg"
                 alt=""
                 width={50}
                 height={50}
-                className="object-contain"
+                className="object-contain w-[50px] h-[50px]"
               />
               <h4 className="text-lg font-bold">Commitment</h4>
               <p className="text-sm text-gray-700">

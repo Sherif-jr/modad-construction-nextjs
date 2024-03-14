@@ -1,7 +1,6 @@
 import { companies } from "@/_staticData/basicDetails";
 import BreadCrumbs from "@/components/UI/BreadCrumbs";
 import ServiceSection from "@/components/UI/ServiceSection";
-import React from "react";
 
 const OurGroupPage = () => {
   return (
@@ -33,7 +32,7 @@ const OurGroupPage = () => {
           buttonLink={`/our-group/${company.path}`}
           key={company.path}
           companyName={company.name}
-          imgSrc="/imgs/shutterstock_1927041545.jpg"
+          imgSrc={`/imgs/companiesImgs/${company.img}`}
           text={company.discription}
           imgAlt={company.name}
           isImageOnLeft={Boolean(i % 2)}

@@ -30,10 +30,12 @@ const ProjectsTabs = () => {
           <div className="me-2">
             <Select
               placeholder="Filter by Company"
-              options={companies.map((company) => ({
-                lable: company.name,
-                value: company.name,
-              }))}
+              options={companies
+                .filter((company) => !company.name.includes("Foundation"))
+                .map((company) => ({
+                  lable: company.name,
+                  value: company.name,
+                }))}
             />
           </div>
         ),
