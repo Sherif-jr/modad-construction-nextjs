@@ -6,6 +6,7 @@ import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import CXARight from "@/components/UI/CarouselXArrows/CXARight";
 import ReadMoreCollapse from "@/components/UI/ReadMoreCollapse";
+import { companies } from "@/_staticData/basicDetails";
 
 const fetchHome = async () => {
   const res = await fetch(
@@ -192,7 +193,14 @@ export default async function Home() {
               // title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
-            <HomeExpCard
+            {companies.map((company) => (
+              <HomeExpCard
+                key={company.path}
+                imgSrc={`/imgs/companiesImgs/${company.img}`}
+              />
+            ))}
+
+            {/* <HomeExpCard
               // title="MODAD Construction"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
@@ -215,7 +223,7 @@ export default async function Home() {
             <HomeExpCard
               // title="MODAD Foundation"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
+            /> */}
           </div>
         </div>
       </section>
