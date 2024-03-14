@@ -16,7 +16,12 @@ interface IServiceSectionProps {
 const ImgDiv = ({ imgSrc, imgAlt }: { imgSrc: string; imgAlt?: string }) => {
   return (
     <div className="relative w-full min-h-[350px] lg:h-full md:h-[450px]">
-      <Image fill src={imgSrc} className="absolute h-full w-full object-cover" alt={imgAlt || ""} />
+      <Image
+        fill
+        src={imgSrc}
+        className="absolute h-full w-full object-cover"
+        alt={imgAlt || ""}
+      />
     </div>
   );
 };
@@ -50,9 +55,8 @@ const ServiceSection = ({
   text,
   buttonLink,
 }: IServiceSectionProps) => {
-  const md = matchMedia(screenSizes.MD).matches;
-  console.log(md);
-  
+  const md = window?.matchMedia(screenSizes.MD).matches;
+
   return (
     <section className="md:h-[650px] xl:h-[450px] w-full">
       <div className="container mx-auto py-12 md:px-6 lg:px-2 xl:px-0">
