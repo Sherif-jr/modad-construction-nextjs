@@ -15,6 +15,7 @@ import logo5 from "@/assets/companiesLogos/Modad Fine Finishing-Black.svg";
 import logo6 from "@/assets/companiesLogos/Modad Charity Foundation-Black.svg";
 import Link from "next/link";
 import ServiceCard from "@/components/UI/ServiceCard";
+import { companies } from "@/_staticData/basicDetails";
 
 export const metadata: Metadata = {
   title: "Modad - About us",
@@ -70,7 +71,7 @@ const AboutUsPage = () => {
               <Carousel>
                 <div className="relative aspect-square">
                   <Image
-                    src="/imgs/shutterstock_2145134953.jpg"
+                    src="/imgs/Team.jpg"
                     alt=""
                     fill
                     className="object-cover"
@@ -247,33 +248,15 @@ const AboutUsPage = () => {
           </p>
           <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
             <HomeExpCard
-              title="MODAD Group"
+              // title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
-            <HomeExpCard
-              title="MODAD Construction"
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Properties"
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD MEP"
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Smart Solutions"
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Fine Finishing"
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            <HomeExpCard
-              title="MODAD Foundation"
-              imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
+            {companies.map((company) => (
+              <HomeExpCard
+                key={company.path}
+                imgSrc={`/imgs/companiesImgs/${company.img}`}
+              />
+            ))}
           </div>
         </div>
       </section>
