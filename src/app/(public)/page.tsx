@@ -1,13 +1,11 @@
-import { Button, Carousel } from "antd";
+import { Carousel } from "antd";
 import Image from "next/image";
 import HomeExpCard from "@/components/UI/HomeExpCard";
 import ProjectCard from "@/components/UI/ProjectCard";
 import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import CXARight from "@/components/UI/CarouselXArrows/CXARight";
 import ReadMoreCollapse from "@/components/UI/ReadMoreCollapse";
 import { companies } from "@/_staticData/basicDetails";
-import ReactPlayer from "react-player";
 import YoutubePlayer from "@/components/YoutubePlayer";
 
 const fetchHome = async () => {

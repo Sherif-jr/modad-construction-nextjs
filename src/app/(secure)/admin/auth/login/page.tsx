@@ -36,6 +36,9 @@ const SignIn = ({ searchParams }: { searchParams: { returnUrl: string } }) => {
           type="primary"
           htmlType="submit"
           className="block mx-auto bg-primary"
+          style={{
+            display: "block"
+          }}
         >
           Sign In
         </Button>

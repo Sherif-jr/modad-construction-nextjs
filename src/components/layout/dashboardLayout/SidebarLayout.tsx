@@ -13,7 +13,7 @@ const { Header, Content, Footer, Sider } = Layout;
 type MenuItem = Required<MenuProps>["items"][number];
 
 const menuItems: MenuItem[] = items.map((item) => ({
-  label: <Link href={item.children ? "" : item.path}>{item.title}</Link>,
+  label: <Link href={item.children ? "" : item.path} className="text-inherit hover:text-white">{item.title}</Link>,
   key: item.path,
   icon: item.icon,
   children: item.children?.map((subItem) => ({
