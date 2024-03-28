@@ -29,10 +29,10 @@ const NewItem = ({
         okButtonProps={{ className: "bg-primary" }}
         onCancel={toggleModal(false)}
         onOk={async () => {
-          setLoading(true);
           form
             .validateFields()
             .then(async (values) => {
+              setLoading(true);
               const fileData = Array.isArray(values.media)
                 ? await getImageFromUpload(values.media[0])
                 : undefined;
@@ -56,6 +56,9 @@ const NewItem = ({
             })
             .catch((err) => {
               console.log(err);
+              if (err?.errorFields && err.errorFields.length > 0) {
+                return;
+              }
               if (onError) onError();
             });
         }}

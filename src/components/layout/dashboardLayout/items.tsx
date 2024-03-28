@@ -43,11 +43,11 @@ const items: Item[] = [
       },
     ],
   },
-  {
-    title: "Brands",
-    path: "/admin/dashboard/edit-website/home/brands",
-    icon: <DatabaseOutlined />,
-  },
+  // {
+  //   title: "Brands",
+  //   path: "/admin/dashboard/edit-website/home/brands",
+  //   icon: <DatabaseOutlined />,
+  // },
   {
     title: "News",
     path: "/admin/dashboard/edit-website/home/news",

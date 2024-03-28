@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 
 const ServiceSection = dynamic(() => import("@/components/UI/ServiceSection"), {
   ssr: false,
-  
 });
 
 const OurGroupPage = () => {

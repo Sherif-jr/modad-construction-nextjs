@@ -45,7 +45,7 @@ const MainCarousel = () => {
           <LoadingOutlined />
         </div>
       )}
-      {!loading && data.length === 0 && (
+      {!loading && (!data || data.length === 0) && (
         <div>
           <p className="text-center">There is no saved carousels!</p>
         </div>

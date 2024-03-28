@@ -7,6 +7,8 @@ import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import CXARight from "@/components/UI/CarouselXArrows/CXARight";
 import ReadMoreCollapse from "@/components/UI/ReadMoreCollapse";
 import { companies } from "@/_staticData/basicDetails";
+import ReactPlayer from "react-player";
+import YoutubePlayer from "@/components/YoutubePlayer";
 
 const fetchHome = async () => {
   const res = await fetch(
@@ -34,7 +36,8 @@ export default async function Home() {
             infinite
           >
             <div className="aspect-video xl:max-h-screen relative">
-              <iframe
+              <YoutubePlayer url="https://www.youtube.com/watch?v=bY7_wrd21iE" />
+              {/* <iframe
                 width="100%"
                 height="100%"
                 src="https://www.youtube-nocookie.com/embed/bY7_wrd21iE?version=3&amp;enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;showinfo=0&amp;rel=0&amp;origin=https://modad-construction.com;&amp;controls=0&amp;playsinline=1&autoplay=1&mute=1&controls=0&loop=1&showinfo=0&fs=1"
@@ -53,7 +56,7 @@ export default async function Home() {
                   left: "-16.6667%",
                   display: "block",
                 }}
-              />
+              /> */}
               {/* <iframe
                 allow="autoplay; fullscreen"
                 type="text/html"
