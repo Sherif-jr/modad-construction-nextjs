@@ -22,27 +22,42 @@ const OurGroupPage = () => {
           <div className="w-full flex flex-col gap-4 items-center">
             <h1 className="text-2xl font-bold uppercase">Our Group</h1>
             <p className=" text-white/90 max-w-2xl text-sm text-center">
-              We take immense pride in our diverse portfolio of companies. From
-              Construction to Real Estate Development; MEP services to Digital
-              Transformation, each of our business units is driven by a
-              commitment to delivering exceptional solutions and consistently
-              exceeding customer expectations.
+              We take immense pride in the extensive array of companies within
+              our portfolio, each representing a unique aspect of our commitment
+              to excellence. From Construction, where we bring architectural
+              visions to life, to Real Estate Development, where we craft
+              vibrant communities that stand as testaments to our dedication to
+              quality living spaces. Our MEP services go beyond the ordinary,
+              ensuring that every aspect of a building&apos;s mechanical,
+              electrical, and plumbing systems is meticulously planned and
+              executed for optimal performance. Across all these domains, our
+              singular focus remains on exceeding customer expectations, setting
+              new standards for innovation, and making a lasting impact on the
+              world around us.
             </p>
           </div>
         </div>
       </main>
 
-      {companies.map((company, i) => (
-        <ServiceSection
-          buttonLink={`/our-group/${company.path}`}
-          key={company.path}
-          companyName={company.name}
-          imgSrc={`/imgs/companiesImgs/${company.img}`}
-          text={company.discription}
-          imgAlt={company.name}
-          isImageOnLeft={Boolean(i % 2)}
-        />
-      ))}
+      <div className="py-12">
+        {companies.map((company, i) => (
+          <ServiceSection
+            buttonLink={`/our-group/${company.path}`}
+            key={company.path}
+            companyName={company.name}
+            imgSrc={
+              company.path === "modad-construction"
+                ? "/imgs/companiesImgs/MODAD-Construction2.jpg"
+                : company.path === "modad-properties"
+                ? "/imgs/companiesImgs/MODAD-Properties2.jpg"
+                : `/imgs/companiesImgs/${company.img}`
+            }
+            text={company.discription}
+            imgAlt={company.name}
+            isImageOnLeft={Boolean(i % 2)}
+          />
+        ))}
+      </div>
     </>
   );
 };

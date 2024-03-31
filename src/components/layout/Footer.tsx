@@ -29,21 +29,21 @@ const Footer = () => {
                 <Link href="/about-us">About us</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">Our Group</Link>
+                <Link href="/our-group">Our Group</Link>
               </li>
               <li className="uppercase">
                 <Link href="/projects">Proiects</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">News</Link>
-              </li>
-              <li className="uppercase">
-                <Link href="/">Careers</Link>
+                <Link href="/news">News</Link>
               </li>
             </ul>
           </div>
           <div>
             <ul className="flex flex-col gap-3">
+              <li className="uppercase">
+                <Link href="/careers">Careers</Link>
+              </li>
               <li className="uppercase">
                 <Link href="/">Portal</Link>
               </li>

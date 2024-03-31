@@ -32,12 +32,12 @@ const AboutUsPage = () => {
         ]}
       />
       <main className="bg-primary relative">
-        {/* <Image
+        <Image
           fill
-          src="/pattern.svg"
+          src="/imgs/Team.png"
           alt=""
-          className="object-cover opacity-5"
-        /> */}
+          className="object-cover opacity-25"
+        />
         <div className="container mx-auto py-12 px-6 md:px-0 relative z-[1]">
           {/* <h3 className="text-3xl font-bold mb-6">MODAD</h3> */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]">
@@ -68,7 +68,7 @@ const AboutUsPage = () => {
               </p>
             </div>
             <div className="">
-              <Carousel>
+              {/* <Carousel>
                 <div className="relative aspect-square">
                   <Image
                     src="/imgs/Team.jpg"
@@ -85,7 +85,7 @@ const AboutUsPage = () => {
                     className="object-cover"
                   />
                 </div>
-              </Carousel>
+              </Carousel> */}
             </div>
             <div></div>
           </div>
@@ -212,6 +212,7 @@ const AboutUsPage = () => {
                 deliver synergies in our work.
               </p>
             </div>
+            <div className="lg:block hidden" />
             <div className="flex flex-col gap-2 p-4">
               <Image
                 src="/icons/commitment.svg"
@@ -242,19 +243,20 @@ const AboutUsPage = () => {
             of passion, innovation, and excellence. Since our inception in 2011,
             we have been at the forefront of the construction, real estate, MEP
             services, and smart solutions industries, shaping a better tomorrow
-            for communities worldwide. MODAD Group is divided into 7
-            subsidiaries, in which each is specialized or serves in a different
-            yet crossed sector:
+            for communities worldwide. MODAD Group is divided into 6
+            subsidiaries and a charity foundation, in which each is specialized
+            or serves in a different yet crossed sector:
           </p>
           <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
             <HomeExpCard
-              // title="MODAD Group"
+              title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             {companies.map((company) => (
               <HomeExpCard
                 key={company.path}
                 imgSrc={`/imgs/companiesImgs/${company.img}`}
+                title={company.name}
               />
             ))}
           </div>

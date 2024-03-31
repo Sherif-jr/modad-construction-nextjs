@@ -29,13 +29,15 @@ const TextDiv = ({
   companyName,
   text,
   buttonLink,
+  isLeft
 }: {
   companyName: string;
   text: string;
   buttonLink?: string;
+  isLeft?: boolean;
 }) => {
   return (
-    <div className="w-full h-full flex flex-col justify-center">
+    <div className={`w-full h-full flex flex-col justify-center py-4 ${isLeft? "pe-4":"ps-4"}`}>
       <h2 className="font-bold text-xl">{companyName}</h2>
       <p className="my-6">{text}</p>
       {/* <Link href={buttonLink || "#"} className="">
@@ -55,18 +57,18 @@ const ServiceSection = ({
   text,
   buttonLink,
 }: IServiceSectionProps) => {
-  
   const md = matchMedia(screenSizes.MD).matches;
 
   return (
-    <section className="md:h-[650px] xl:h-[450px] w-full">
-      <div className="container mx-auto py-12 md:px-6 lg:px-2 xl:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section className="w-full">
+      <div className="container mx-auto md:px-6 lg:px-2 xl:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           <div>
             {!md && isImageOnLeft ? (
               <ImgDiv imgSrc={imgSrc} imgAlt={imgAlt} />
             ) : (
               <TextDiv
+                isLeft={md || !isImageOnLeft}
                 companyName={companyName}
                 text={text}
                 buttonLink={buttonLink}
@@ -78,6 +80,7 @@ const ServiceSection = ({
               <ImgDiv imgSrc={imgSrc} imgAlt={imgAlt} />
             ) : (
               <TextDiv
+                isLeft={md || !isImageOnLeft}
                 companyName={companyName}
                 text={text}
                 buttonLink={buttonLink}

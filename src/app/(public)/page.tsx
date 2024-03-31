@@ -1,4 +1,4 @@
-import { Carousel } from "antd";
+import { Button, Carousel } from "antd";
 import Image from "next/image";
 import HomeExpCard from "@/components/UI/HomeExpCard";
 import ProjectCard from "@/components/UI/ProjectCard";
@@ -33,7 +33,7 @@ export default async function Home() {
             pauseOnDotsHover={false}
             infinite
           >
-            <div className="aspect-video xl:max-h-screen relative">
+            <div className="aspect-video xl:max-h-screen relative scale-125 select-none">
               <YoutubePlayer url="https://www.youtube.com/watch?v=bY7_wrd21iE" />
               {/* <iframe
                 width="100%"
@@ -87,7 +87,7 @@ export default async function Home() {
                 </div>
               </div> */}
             </div>
-            {/* <div className="aspect-video relative xl:max-h-screen">
+            <div className="aspect-video relative xl:max-h-screen">
               <Image
                 src="/imgs/shutterstock_1067925506.jpg"
                 alt=""
@@ -144,7 +144,7 @@ export default async function Home() {
                   </Button>
                 </div>
               </div>
-            </div> */}
+            </div>
           </Carousel>
         </div>
       </main>
@@ -191,13 +191,14 @@ export default async function Home() {
           </p>
           <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
             <HomeExpCard
-              // title="MODAD Group"
+              title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
             />
             {companies.map((company) => (
               <HomeExpCard
                 key={company.path}
                 imgSrc={`/imgs/companiesImgs/${company.img}`}
+                title={company.name}
               />
             ))}
 
@@ -283,7 +284,7 @@ export default async function Home() {
           <h2 className="text-primary text-2xl xl:text-3xl mb-6 xl:mb-12">
             Current Projects
           </h2>
-          <div className="w-full px-6 md:px-12 lg:px-6 xl:px-12">
+          <div className="w-full px-6 md:px-12 lg:px-12 xl:px-12">
             <Carousel
               arrows
               dots={false}
@@ -427,10 +428,10 @@ export default async function Home() {
           alt=""
           className="object-cover opacity-5"
         /> */}
-        <div className="container mx-auto py-12 relative z-[1]">
+        <div className="container mx-auto py-12 relative z-[1] lg:px-6">
           <h3 className="text-3xl mb-6">Corporate Responsibility</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]">
-            <div className="text-black p-4 flex flex-col justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[40vh]">
+            <div className="text-black flex flex-col">
               {/* <h4 className="text-xl font-bold mb-4">Impact...</h4> */}
               <p className="text-lg">
                 Committed to making a meaningful impact, We strive to give back
@@ -442,8 +443,8 @@ export default async function Home() {
                 concept of “Home”.
               </p>
             </div>
-            <div className="grid grid-cols-2 grid-rows-2 px-4 lg:px-0 lg:gap-8">
-              <div className="relative aspect-square">
+            <div className="grid grid-cols-2 grid-rows-1 px-4 lg:px-0 lg:gap-4 justify-items-center">
+              <div className="relative aspect-square w-[100%]">
                 <Image
                   src="/imgs/shutterstock_2145134953.jpg"
                   alt=""
@@ -451,15 +452,16 @@ export default async function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative">
+              {/* <div className="relative">
                 <Image
                   src="/imgs/shutterstock_2298356519.jpg"
                   alt=""
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="relative">
+              </div> */}
+              {/* <div></div> */}
+              <div className="relative aspect-square w-[100%]">
                 <Image
                   src="/imgs/shutterstock_1868955754.jpg"
                   alt=""
@@ -467,7 +469,7 @@ export default async function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative">
+              {/* <div className="relative">
                 <Image
                   // src="/imgs/shutterstock_697100377.jpg"
                   src="/forth.jpg"
@@ -475,9 +477,8 @@ export default async function Home() {
                   fill
                   className="object-cover grayscale"
                 />
-              </div>
+              </div> */}
             </div>
-            <div></div>
           </div>
         </div>
       </section>
