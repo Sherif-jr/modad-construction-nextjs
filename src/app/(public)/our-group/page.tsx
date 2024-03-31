@@ -21,7 +21,7 @@ const OurGroupPage = () => {
         <div className="container mx-auto py-12 md:px-6 lg:px-0">
           <div className="w-full flex flex-col gap-4 items-center">
             <h1 className="text-2xl font-bold uppercase">Our Group</h1>
-            <p className=" text-white/90 max-w-2xl text-sm text-center">
+            <p className=" text-white/90 max-w-2xl text-sm text-justify">
               We take immense pride in the extensive array of companies within
               our portfolio, each representing a unique aspect of our commitment
               to excellence. From Construction, where we bring architectural

@@ -14,7 +14,7 @@ const ProjectsPage = () => {
       <main className="bg-black min-h-[70vh]">
         <div className="container mx-auto py-12 px-4 md:px-0">
           <div className="text-white mb-12 max-w-[900px] mx-auto text-center px-4">
-            <p>
+            <p className="text-justify">
               Since 2011, MODAD Group has been offering an extensive range of
               projects that cater to the ever-evolving needs of the industry.
               Dive into the showcase of transformative endeavors, where the

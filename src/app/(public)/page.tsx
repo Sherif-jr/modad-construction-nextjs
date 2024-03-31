@@ -182,7 +182,7 @@ export default async function Home() {
           <h2 className="text-primary text-xl sm:text-3xl font-bold text-center">
             OUR GROUP
           </h2>
-          <p className="text-center mt-4 text-sm max-w-[1024px] mx-auto">
+          <p className="text-justify mt-4 text-sm max-w-[1024px] mx-auto">
             Welcome to MODAD Group, a dynamic conglomerate built on the pillars
             of passion, innovation, and excellence. Established in 2011 by
             Engineer Mohamed El Haddad, MODAD Group consists of six subsidiaries
@@ -403,7 +403,7 @@ export default async function Home() {
                       <h3 className="mb-3 text-base lg:text-xl font-bold">
                         LOREM IPSUM DOLOR (REUTERS)
                       </h3>
-                      <p className="text-xs md:text-base">
+                      <p className="text-xs md:text-base text-justify">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing
                         elit, sed diam nonummy nibh euismod tincidunt ut laoreet
                         doloreolore eu feugiat nulla facilisis at vero eros et
@@ -433,7 +433,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[40vh]">
             <div className="text-black flex flex-col">
               {/* <h4 className="text-xl font-bold mb-4">Impact...</h4> */}
-              <p className="text-lg">
+              <p className="text-lg text-justify">
                 Committed to making a meaningful impact, We strive to give back
                 to the community and uplift the lives of the less fortunate.
                 Renovation of slums and uplifting living conditions is at the

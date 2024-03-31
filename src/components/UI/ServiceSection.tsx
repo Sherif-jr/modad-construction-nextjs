@@ -39,7 +39,7 @@ const TextDiv = ({
   return (
     <div className={`w-full h-full flex flex-col justify-center py-4 ${isLeft? "pe-4":"ps-4"}`}>
       <h2 className="font-bold text-xl">{companyName}</h2>
-      <p className="my-6">{text}</p>
+      <p className="my-6 text-justify">{text}</p>
       {/* <Link href={buttonLink || "#"} className="">
         <Button size="large" type="primary" className="bg-primary">
           Learn More

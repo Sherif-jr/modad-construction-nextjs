@@ -31,44 +31,44 @@ const AboutUsPage = () => {
           { title: "About us", path: "/about-us" },
         ]}
       />
-      <main className="bg-primary relative">
+      <main className="bg-primary relative aspect-video">
         <Image
           fill
           src="/imgs/Team.png"
           alt=""
           className="object-cover opacity-25"
         />
-        <div className="container mx-auto py-12 px-6 md:px-0 relative z-[1]">
+        <div className="container mx-auto py-12 px-6 md:px-0 relative z-[1] lg:min-h-[60vh]">
           {/* <h3 className="text-3xl font-bold mb-6">MODAD</h3> */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]">
-            <div className="text-white p-4 flex flex-col justify-start">
-              <h4 className="text-xl font-bold mb-4 uppercase">
-                Welcome to MODAD Group
-              </h4>
-              <p className="text-lg">
-                A dynamic conglomerate built on the pillars of passion,
-                innovation, and excellence. Since our inception in 2011, we have
-                been at the forefront of the Construction, Real Estate
-                Development, MEP services, and Smart solutions industries,
-                shaping a better tomorrow for communities worldwide. Led by
-                visionary Founder and Chairman, Engineer Mohamed El-Haddad, our
-                group is driven by a steadfast commitment to delivering
-                exceptional engineering solutions and infrastructure
-                development. With over 12 years of expertise and a growing
-                portfolio of successful projects, we have earned the trust of
-                clients and investors alike. From Real Estate Development,
-                Construction & Engineering Solutions, Electromechanical
-                Services, Fine Finishing, to Smart Solutions, our diverse range
-                of companies provides comprehensive solutions tailored to the
-                unique needs of our clients. Join us on a remarkable journey of
-                engineering excellence, sustainable development, and meaningful
-                contributions to society. At MODAD Group, we are more than just
-                a conglomerate; we are a force shaping a brighter, more
-                prosperous future for generations to come.
-              </p>
-            </div>
-            <div className="">
-              {/* <Carousel>
+          {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]"> */}
+          <div className="text-white p-4 flex flex-col justify-start">
+            <h4 className="text-xl font-bold mb-4 uppercase">
+              Welcome to MODAD Group
+            </h4>
+            <p className="text-lg text-justify">
+              A dynamic conglomerate built on the pillars of passion,
+              innovation, and excellence. Since our inception in 2011, we have
+              been at the forefront of the Construction, Real Estate
+              Development, MEP services, and Smart solutions industries, shaping
+              a better tomorrow for communities worldwide. Led by visionary
+              Founder and Chairman, Engineer Mohamed El-Haddad, our group is
+              driven by a steadfast commitment to delivering exceptional
+              engineering solutions and infrastructure development. With over 12
+              years of expertise and a growing portfolio of successful projects,
+              we have earned the trust of clients and investors alike. From Real
+              Estate Development, Construction & Engineering Solutions,
+              Electromechanical Services, Fine Finishing, to Smart Solutions,
+              our diverse range of companies provides comprehensive solutions
+              tailored to the unique needs of our clients. Join us on a
+              remarkable journey of engineering excellence, sustainable
+              development, and meaningful contributions to society. At MODAD
+              Group, we are more than just a conglomerate; we are a force
+              shaping a brighter, more prosperous future for generations to
+              come.
+            </p>
+          </div>
+          <div className="">
+            {/* <Carousel>
                 <div className="relative aspect-square">
                   <Image
                     src="/imgs/Team.jpg"
@@ -86,14 +86,14 @@ const AboutUsPage = () => {
                   />
                 </div>
               </Carousel> */}
-            </div>
-            <div></div>
           </div>
+          <div></div>
         </div>
+        {/* </div> */}
       </main>
       <section className="bg-black">
         <div className="container mx-auto py-24 px-6 md:px-0">
-          <p className="mb-16 text-center text-white">
+          <p className="mb-16 text-justify text-white">
             An inspiring vision. A clear mission. And meaningful values. That’s
             what drives the success of the MODAD Group. We believe in harnessing
             our collective power to work together towards a unified goal.
@@ -238,7 +238,7 @@ const AboutUsPage = () => {
           <h2 className="text-primary text-xl sm:text-3xl font-bold text-center">
             OUR GROUP
           </h2>
-          <p className="text-center mt-4 text-sm max-w-[1024px] mx-auto">
+          <p className="text-justify mt-4 text-sm max-w-[1024px] mx-auto">
             Welcome to MODAD Group, a dynamic conglomerate built on the pillars
             of passion, innovation, and excellence. Since our inception in 2011,
             we have been at the forefront of the construction, real estate, MEP
