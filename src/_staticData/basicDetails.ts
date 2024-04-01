@@ -91,8 +91,8 @@ export const companies2: {
   {
     name: "Facility Management",
     path: "facility-management",
-    discription: "MODAD-Construction.png",
-    img: "",
+    discription: "",
+    img: "MODAD-Construction.png",
   },
   {
     name: "Foundation",
