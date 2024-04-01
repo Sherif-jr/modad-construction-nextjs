@@ -5,9 +5,11 @@ import { Collapse } from "antd";
 const ReadMoreCollapse = ({
   content,
   signature,
+  lastLine,
 }: {
   content: string;
   signature?: string;
+  lastLine?: string;
 }) => {
   const [collapsed, setCollapsed] = useState(true);
   return (
@@ -33,6 +35,7 @@ const ReadMoreCollapse = ({
             <>
               <p className="text-white">{content}</p>
               {signature && <p className="text-white font-bold">{signature}</p>}
+              {lastLine && <p className="text-white font-bold">{lastLine}</p>}
             </>
           ),
         },

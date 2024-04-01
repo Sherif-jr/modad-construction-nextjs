@@ -22,7 +22,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className=" xl:min-h-[90vh] xl:max-h-screen">
+      <main className=" xl:max-h-screen">
         <div className="w-full">
           <Carousel
             slidesToShow={1}
@@ -150,12 +150,12 @@ export default async function Home() {
       </main>
       <section>
         <div className="w-full xl:h-[100vh]  flex flex-col-reverse xl:flex-row relative overflow-hidden">
-          <div className="bg-[#111619] w-full xl:w-[40%] flex py-6 px-6 items-center">
+          <div className="bg-[#111619] w-full xl:w-[38%] flex py-6 px-6 items-center">
             <div className="relative z-[2] ">
-              <h2 className="text-primary font-bold uppercase text-3xl mb-4">
+              <h2 className="text-primary font-bold uppercase text-2xl mb-4">
                 Chairman message
               </h2>
-              <p className="text-white">
+              <p className="text-white text-sm">
                 It is with great pleasure and gratitude that I welcome you to
                 the world of MODAD Group of Companies. Since our humble
                 beginnings in 2011, we have strived relentlessly to build a
@@ -163,12 +163,13 @@ export default async function Home() {
                 our clients and stakeholders...
               </p>
               <ReadMoreCollapse
-                signature="Mohamed El Haddad - Founder and CEO, MODAD Group of Companies"
+                signature="Mohamed El Haddad"
+                lastLine="Founder and CEO, MODAD Group of Companies"
                 content="At MODAD Group, we firmly believe that our success is a direct result of our company culture, which places utmost importance on integrity, collaboration, and the pursuit of excellence. These core values have been the driving force behind our achievements and the strong relationships we have built over the years. We take immense pride in our diverse portfolio of companies, spanning real estate development, construction, MEP services, and digital transformation. Each of our entities represents a testament to our dedication to delivering exceptional solutions and exceeding customer expectations. Our group's success is not merely measured in projects completed or financial milestones achieved; it is deeply rooted in the trust and satisfaction of our customers and partners. We are committed to creating long-term value, fostering sustainable growth, and contributing to the communities we serve. As we embark on this journey, we extend a warm welcome to potential customers and investors who share our vision of shaping a brighter future. We invite you to explore the vast possibilities and opportunities within our group, confident that together, we can achieve remarkable milestones and unlock new horizons of success. Thank you for considering MODAD Group of Companies as your trusted partner. We look forward to building lasting relationships, realizing shared aspirations, and creating a better tomorrow, hand in hand."
               />
             </div>
           </div>
-          <div className="w-full aspect-video xl:aspect-auto xl:w-[60%] relative">
+          <div className="w-full aspect-video xl:aspect-auto xl:w-[62%] relative">
             <Image src="/Chairman.jpg" alt="" className="object-cover" fill />
           </div>
           <div className="absolute w-1/2 h-[350vh] -rotate-[30deg] hidden xl:flex -bottom-[100vh]">
