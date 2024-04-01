@@ -5,7 +5,7 @@ import ProjectCard from "@/components/UI/ProjectCard";
 import CXALeft from "@/components/UI/CarouselXArrows/CXALeft";
 import CXARight from "@/components/UI/CarouselXArrows/CXARight";
 import ReadMoreCollapse from "@/components/UI/ReadMoreCollapse";
-import { companies } from "@/_staticData/basicDetails";
+import { companies, companies2 } from "@/_staticData/basicDetails";
 import YoutubePlayer from "@/components/YoutubePlayer";
 
 const fetchHome = async () => {
@@ -190,14 +190,18 @@ export default async function Home() {
             a different yet crossed sector:
           </p>
           <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
-            <HomeExpCard
+            {/* <HomeExpCard
               title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            {companies.map((company) => (
+            /> */}
+            {companies2.map((company) => (
               <HomeExpCard
                 key={company.path}
-                imgSrc={`/imgs/companiesImgs/${company.img}`}
+                imgSrc={
+                  company.img.startsWith("/")
+                    ? company.img
+                    : `/imgs/companiesImgs/${company.img}`
+                }
                 title={company.name}
               />
             ))}
