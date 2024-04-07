@@ -2,7 +2,7 @@ import { Button, Form, Input } from "antd";
 
 const CareersSearch = () => {
   return (
-    <Form className="w-full grid grid-cols-4 gap-6">
+    <Form className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
       <Form.Item>
         <Input placeholder="Search by position" />
       </Form.Item>

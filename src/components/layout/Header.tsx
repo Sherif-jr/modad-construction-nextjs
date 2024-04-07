@@ -9,7 +9,7 @@ import { Dropdown, MenuProps } from "antd";
 import { companies } from "@/_staticData/basicDetails";
 
 const NewsItems: MenuProps["items"] = [
-  { key: "articles", label: "Article" },
+  // { key: "articles", label: "Article" },
   {
     key: "newsletter",
     label: (
@@ -58,17 +58,17 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
-              <Dropdown
+              {/* <Dropdown
                 menu={{
                   items: groupItems,
                 }}
-              >
+              > */}
                 <span>
                   <NavLink href="/our-group" exact activeClassName="text-primary">
                     Our Group
                   </NavLink>
                 </span>
-              </Dropdown>
+              {/* </Dropdown> */}
             </li>
             <li className="uppercase hover:text-gray-300 transition-all">
               <NavLink href="/projects" activeClassName="text-primary">
@@ -85,9 +85,9 @@ const Header = () => {
                 Careers
               </NavLink>
             </li>
-            <li className="uppercase hover:text-gray-300 transition-all">
+            {/* <li className="uppercase hover:text-gray-300 transition-all">
               <Link href="#">Portals</Link>
-            </li>
+            </li> */}
             <li className="uppercase hover:text-gray-300 transition-all">
               <NavLink href="/contact-us" exact activeClassName="text-primary">
                 Contact us

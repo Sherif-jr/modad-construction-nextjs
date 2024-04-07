@@ -21,7 +21,17 @@ const Careers = () => {
         ]}
       />
       <main className="bg-black">
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto px-4 py-12">
+          <div className="w-full max-w-[800px] mx-auto">
+            <p className="text-center text-white">
+              <span className="block text-lg font-bold">
+                Welcome to MODAD Group Careers!
+              </span>{" "}
+              Explore exciting opportunities and join a dynamic team dedicated
+              to driving innovation and excellence across diverse industries.{" "}
+              <span className="block">Join us Now!</span>
+            </p>
+          </div>
           <div className="p-8">
             <CareersSearch />
           </div>
@@ -45,7 +55,7 @@ const Careers = () => {
                         elit. Magnam, eius nobis! Minus pariatur alias aliquam?
                       </p>
                       <div className="flex justify-end">
-                        <Button>Apply Now</Button>
+                        <CareersApplyButton />
                       </div>
                     </div>
                   ),

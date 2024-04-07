@@ -53,7 +53,7 @@ const ProjectPage = ({ params }: { params: Params }) => {
                   <Divider />
                   <p className="text-white/70">Lorem, ipsum dolor.</p>
                 </div>
-                <div>
+                {/* <div>
                   <h3 className="font-bold">Company</h3>
                   <Divider />
                   <p className="text-white/70">Lorem, ipsum.</p>
@@ -62,7 +62,7 @@ const ProjectPage = ({ params }: { params: Params }) => {
                   <h3 className="font-bold">Budget</h3>
                   <Divider />
                   <p className="text-white/70">1.3 M</p>
-                </div>
+                </div> */}
                 <div>
                   <h3 className="font-bold">Location</h3>
                   <Divider />

@@ -33,9 +33,9 @@ const ReadMoreCollapse = ({
           showArrow: false,
           children: (
             <>
-              <p className="text-white">{content}</p>
-              {signature && <p className="text-white font-bold">{signature}</p>}
-              {lastLine && <p className="text-white font-bold">{lastLine}</p>}
+              <p className="text-white text-justify text-base">{content}</p>
+              {signature && <p className="text-white font-bold text-base mt-2 mb-1">{signature}</p>}
+              {lastLine && <p className="text-white font-bold text-base">{lastLine}</p>}
             </>
           ),
         },

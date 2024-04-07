@@ -212,7 +212,6 @@ const AboutUsPage = () => {
                 deliver synergies in our work.
               </p>
             </div>
-            <div className="lg:block hidden" />
             <div className="flex flex-col gap-2 p-4">
               <Image
                 src="/icons/commitment.svg"

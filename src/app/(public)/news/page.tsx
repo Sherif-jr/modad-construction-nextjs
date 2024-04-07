@@ -16,7 +16,7 @@ const NewsPage = () => {
         ]}
       />
       <main className="bg-black text-white">
-        <div className="container mx-auto">
+        <div className="container mx-auto py-12">
           <div className="w-full p-8">
             {/* <VerticalCarousel /> */}
             <Tabs
@@ -125,7 +125,7 @@ const NewsPage = () => {
           </div>
         </div>
       </main>
-      <section className="bg-primary">
+      {/* <section className="bg-primary">
         <div className="container mx-auto py-12 px-2 lg:px-6">
           <div className="flex flex-col gap-12 px-1 md:px-0">
             <div>
@@ -200,7 +200,7 @@ const NewsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

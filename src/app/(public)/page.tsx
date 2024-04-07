@@ -149,33 +149,40 @@ export default async function Home() {
         </div>
       </main>
       <section>
-        <div className="w-full xl:h-[100vh]  flex flex-col-reverse xl:flex-row relative overflow-hidden">
-          <div className="bg-[#111619] w-full xl:w-[38%] flex py-6 px-6 items-center">
+        <div className="w-full xl:min-h-[100vh]  flex flex-col-reverse xl:flex-row relative overflow-hidden">
+          <div className="bg-[#111619] w-full xl:w-[45%] flex py-6 px-6 items-center">
             <div className="relative z-[2] ">
-              <h2 className="text-primary font-bold uppercase text-2xl mb-4">
+              <h2 className="text-primary font-bold uppercase text-2xl mb-4 pl-5">
                 Chairman message
               </h2>
-              <p className="text-white text-sm">
+              <p className="text-white text-justify px-5">
                 It is with great pleasure and gratitude that I welcome you to
                 the world of MODAD Group of Companies. Since our humble
                 beginnings in 2011, we have strived relentlessly to build a
                 legacy of excellence, innovation, and unwavering commitment to
                 our clients and stakeholders...
               </p>
-              <ReadMoreCollapse
-                signature="Mohamed El Haddad"
-                lastLine="Founder and CEO, MODAD Group of Companies"
-                content="At MODAD Group, we firmly believe that our success is a direct result of our company culture, which places utmost importance on integrity, collaboration, and the pursuit of excellence. These core values have been the driving force behind our achievements and the strong relationships we have built over the years. We take immense pride in our diverse portfolio of companies, spanning real estate development, construction, MEP services, and digital transformation. Each of our entities represents a testament to our dedication to delivering exceptional solutions and exceeding customer expectations. Our group's success is not merely measured in projects completed or financial milestones achieved; it is deeply rooted in the trust and satisfaction of our customers and partners. We are committed to creating long-term value, fostering sustainable growth, and contributing to the communities we serve. As we embark on this journey, we extend a warm welcome to potential customers and investors who share our vision of shaping a brighter future. We invite you to explore the vast possibilities and opportunities within our group, confident that together, we can achieve remarkable milestones and unlock new horizons of success. Thank you for considering MODAD Group of Companies as your trusted partner. We look forward to building lasting relationships, realizing shared aspirations, and creating a better tomorrow, hand in hand."
-              />
+              <div className="px-1">
+                <ReadMoreCollapse
+                  signature="Mohamed El Haddad"
+                  lastLine="Founder and CEO, MODAD Group of Companies"
+                  content="At MODAD Group, we firmly believe that our success is a direct result of our company culture, which places utmost importance on integrity, collaboration, and the pursuit of excellence. These core values have been the driving force behind our achievements and the strong relationships we have built over the years. We take immense pride in our diverse portfolio of companies, spanning real estate development, construction, MEP services, and digital transformation. We are committed to creating long-term value, fostering sustainable growth, and contributing to the communities we serve. We invite you to explore the vast possibilities and opportunities within our group, confident that together, we can achieve remarkable milestones and unlock new horizons of success."
+                />
+              </div>
             </div>
           </div>
-          <div className="w-full aspect-video xl:aspect-auto xl:w-[62%] relative">
-            <Image src="/Chairman.jpg" alt="" className="object-cover" fill />
+          <div className="w-full aspect-video xl:aspect-auto xl:w-[55%] relative transition-all duration-300">
+            <Image
+              src="/Chairman.jpg"
+              alt=""
+              className="object-cover transition-all duration-300"
+              fill
+            />
           </div>
-          <div className="absolute w-1/2 h-[350vh] -rotate-[30deg] hidden xl:flex -bottom-[100vh]">
+          {/* <div className="absolute w-1/2 h-[350vh] -rotate-[30deg] hidden xl:flex -bottom-[100vh]">
             <div className="grow h-full bg-[#111619] "></div>
             <div className=" w-[180px] h-full bg-gradient-to-r from-[#373737] to-[#231f20]"></div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section>
@@ -190,7 +197,7 @@ export default async function Home() {
             and a Charity Foundation, in which each is specialized or serves in
             a different yet crossed sector:
           </p>
-          <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
+          <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12 gap-4">
             {/* <HomeExpCard
               title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"

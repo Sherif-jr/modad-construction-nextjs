@@ -10,18 +10,18 @@ import FooterContactForm from "./FooterContactForm";
 const Footer = () => {
   return (
     <footer className="bg-black text-white">
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-5 md:gap-x-5 xl:gap-x-2 px-8 md:px-0">
           <div className="flex flex-col justify-between gap-4">
-            <div className="w-full relative h-12 ">
+            <Link href="/" className="w-full relative h-12 ">
               <Image
                 src={logo}
                 alt="logo"
                 fill
                 className="object-contain object-left"
               />
-            </div>
-            <p className="text-gray-500">&copy; 2023 MODAD GROUP</p>
+            </Link>
+            {/* <p className="text-gray-500">&copy; 2023 MODAD GROUP</p> */}
           </div>
           <div>
             <ul className="flex flex-col gap-3">
@@ -32,9 +32,6 @@ const Footer = () => {
                 <Link href="/our-group">Our Group</Link>
               </li>
               <li className="uppercase">
-                <Link href="/projects">Proiects</Link>
-              </li>
-              <li className="uppercase">
                 <Link href="/news">News</Link>
               </li>
             </ul>
@@ -42,11 +39,14 @@ const Footer = () => {
           <div>
             <ul className="flex flex-col gap-3">
               <li className="uppercase">
-                <Link href="/careers">Careers</Link>
+                <Link href="/projects">Proiects</Link>
               </li>
               <li className="uppercase">
-                <Link href="/">Portal</Link>
+                <Link href="/careers">Careers</Link>
               </li>
+              {/* <li className="uppercase">
+                <Link href="/">Portal</Link>
+              </li> */}
               <li className="uppercase">
                 <Link href="/contact-us">Contact us</Link>
               </li>
@@ -86,6 +86,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mt-4">
+          <p className="text-primary text-center">
+            &copy; 2024 <Link href='/'>MODAD</Link>. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
