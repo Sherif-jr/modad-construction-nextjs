@@ -7,10 +7,11 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons/faXTwitter";
 import FooterContactForm from "./FooterContactForm";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn";
 const Footer = () => {
   return (
     <footer className="bg-black text-white">
-      <div className="container mx-auto pt-12 pb-8">
+      <div className="w-full px-4 lg:px-12 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-y-5 md:gap-x-5 xl:gap-x-2 px-8 md:px-0">
           <div className="flex flex-col justify-between gap-4">
             <Link href="/" className="w-full relative h-12 ">
@@ -52,13 +53,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col items-center md gap-5">
+          <div className="flex flex-col items-center gap-5 my-6 md:mt-0">
             <div>
               <p className="uppercase font-bold text-xl">Contact with us</p>
               <div>
                 <FooterContactForm />
               </div>
-              <div className="flex gap-2 justify-evenly items-center w-48 md:w-40 lg:w-48">
+              <div className="flex gap-2 justify-evenly items-center w-full lg:w-full">
                 <Link
                   href="/"
                   className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
@@ -83,13 +84,19 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon icon={faYoutube} />
                 </Link>
+                <Link
+                  href="/"
+                  className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn} />
+                </Link>
               </div>
             </div>
           </div>
         </div>
         <div className="mt-4">
           <p className="text-primary text-center">
-            &copy; 2024 <Link href='/'>MODAD</Link>. All rights reserved.
+            &copy; 2024 <Link href="/">MODAD</Link>. All rights reserved.
           </p>
         </div>
       </div>

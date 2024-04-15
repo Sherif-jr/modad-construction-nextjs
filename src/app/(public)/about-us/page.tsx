@@ -15,7 +15,7 @@ import logo5 from "@/assets/companiesLogos/Modad Fine Finishing-Black.svg";
 import logo6 from "@/assets/companiesLogos/Modad Charity Foundation-Black.svg";
 import Link from "next/link";
 import ServiceCard from "@/components/UI/ServiceCard";
-import { companies } from "@/_staticData/basicDetails";
+import { companies, companies2 } from "@/_staticData/basicDetails";
 
 export const metadata: Metadata = {
   title: "Modad - About us",
@@ -32,43 +32,52 @@ const AboutUsPage = () => {
         ]}
       />
       <main className="bg-primary relative aspect-video">
-        <Image
+        {/* <Image
           fill
           src="/imgs/Team.png"
           alt=""
           className="object-cover opacity-25"
-        />
+        /> */}
         <div className="container mx-auto py-12 px-6 md:px-0 relative z-[1] lg:min-h-[60vh]">
           {/* <h3 className="text-3xl font-bold mb-6">MODAD</h3> */}
           {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[60vh]"> */}
-          <div className="text-white p-4 flex flex-col justify-start">
-            <h4 className="text-xl font-bold mb-4 uppercase">
-              Welcome to MODAD Group
-            </h4>
-            <p className="text-lg text-justify">
-              A dynamic conglomerate built on the pillars of passion,
-              innovation, and excellence. Since our inception in 2011, we have
-              been at the forefront of the Construction, Real Estate
-              Development, MEP services, and Smart solutions industries, shaping
-              a better tomorrow for communities worldwide. Led by visionary
-              Founder and Chairman, Engineer Mohamed El-Haddad, our group is
-              driven by a steadfast commitment to delivering exceptional
-              engineering solutions and infrastructure development. With over 12
-              years of expertise and a growing portfolio of successful projects,
-              we have earned the trust of clients and investors alike. From Real
-              Estate Development, Construction & Engineering Solutions,
-              Electromechanical Services, Fine Finishing, to Smart Solutions,
-              our diverse range of companies provides comprehensive solutions
-              tailored to the unique needs of our clients. Join us on a
-              remarkable journey of engineering excellence, sustainable
-              development, and meaningful contributions to society. At MODAD
-              Group, we are more than just a conglomerate; we are a force
-              shaping a brighter, more prosperous future for generations to
-              come.
-            </p>
-          </div>
-          <div className="">
-            {/* <Carousel>
+          <div className="flex">
+            <div className="text-white p-4 flex flex-col justify-start w-full lg:w-5/12">
+              <h4 className="text-xl font-bold mb-4 uppercase">
+                Welcome to MODAD Group
+              </h4>
+              <p className="text-lg text-justify">
+                A dynamic conglomerate built on the pillars of passion,
+                innovation, and excellence. Since our inception in 2011, we have
+                been at the forefront of the Construction, Real Estate
+                Development, MEP services, and Smart solutions industries,
+                shaping a better tomorrow for communities worldwide. Led by
+                visionary Founder and Chairman, Engineer Mohamed El-Haddad, our
+                group is driven by a steadfast commitment to delivering
+                exceptional engineering solutions and infrastructure
+                development. With over 12 years of expertise and a growing
+                portfolio of successful projects, we have earned the trust of
+                clients and investors alike. From Real Estate Development,
+                Construction & Engineering Solutions, Electromechanical
+                Services, Fine Finishing, to Smart Solutions, our diverse range
+                of companies provides comprehensive solutions tailored to the
+                unique needs of our clients. Join us on a remarkable journey of
+                engineering excellence, sustainable development, and meaningful
+                contributions to society. At MODAD Group, we are more than just
+                a conglomerate; we are a force shaping a brighter, more
+                prosperous future for generations to come.
+              </p>
+            </div>
+            <div className="flex-1">
+              <div className="relative aspect-square">
+                <Image
+                  src="/imgs/Team.png"
+                  alt=""
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              {/* <Carousel>
                 <div className="relative aspect-square">
                   <Image
                     src="/imgs/Team.jpg"
@@ -86,6 +95,7 @@ const AboutUsPage = () => {
                   />
                 </div>
               </Carousel> */}
+            </div>
           </div>
           <div></div>
         </div>
@@ -246,15 +256,19 @@ const AboutUsPage = () => {
             subsidiaries and a charity foundation, in which each is specialized
             or serves in a different yet crossed sector:
           </p>
-          <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12">
-            <HomeExpCard
+          <div className="grid gap-y-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 py-12 gap-4">
+            {/* <HomeExpCard
               title="MODAD Group"
               imgSrc="/imgs/shutterstock_1411133069.jpg"
-            />
-            {companies.map((company) => (
+            /> */}
+            {companies2.map((company) => (
               <HomeExpCard
                 key={company.path}
-                imgSrc={`/imgs/companiesImgs/${company.img}`}
+                imgSrc={
+                  company.img.startsWith("/")
+                    ? company.img
+                    : `/imgs/companiesImgs/${company.img}`
+                }
                 title={company.name}
               />
             ))}

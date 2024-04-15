@@ -440,7 +440,7 @@ export default async function Home() {
           alt=""
           className="object-cover opacity-5"
         /> */}
-        <div className="container mx-auto py-12 relative z-[1] lg:px-6">
+        <div className="container mx-auto py-12 relative z-[1] px-4">
           <h3 className="text-3xl mb-6">Corporate Responsibility</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:min-h-[40vh]">
             <div className="text-black flex flex-col">

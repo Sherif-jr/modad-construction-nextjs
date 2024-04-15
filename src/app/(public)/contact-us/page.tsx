@@ -1,7 +1,7 @@
 import { Map } from "@/components/Map";
 import BreadCrumbs from "@/components/UI/BreadCrumbs";
 import ContactUsFrom from "@/components/UI/ContactUsFrom";
-import { faFacebookF, faInstagram, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram, faLinkedinIn, faXTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Metadata } from "next";
@@ -27,8 +27,8 @@ const ContactUs = () => {
           <Map />
         </div>
         <div className="container mx-auto py-12 lg:px-6">
-          <div className="grid md:grid-cols-2">
-            <div>
+          <div className="grid md:grid-cols-2 gap-y-12">
+            <div className="px-8">
               <div className="mb-6">
                 <h2 className="uppercase text-primary font-bold text-2xl mb-4">
                   Get In Touch
@@ -64,7 +64,7 @@ const ContactUs = () => {
                   />
                   <span className="text-white">info@modadgroup.com</span>
                 </Link>
-                <div className="flex gap-2 justify-evenly items-center w-48 md:w-40 lg:w-48">
+                <div className="flex gap-4 justify-start items-center w-auto ">
                   <Link
                     href="/"
                     className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
@@ -89,10 +89,16 @@ const ContactUs = () => {
                   >
                     <FontAwesomeIcon icon={faYoutube} />
                   </Link>
+                  <Link
+                    href="/"
+                    className="bg-primary rounded-[50%] p-2 h-9 w-9 md:w-8 md:h-8 lg:h-9 lg:w-9 flex items-center justify-center "
+                  >
+                    <FontAwesomeIcon icon={faLinkedinIn} />
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="px-8 border-l border-[#ffffff99]">
+            <div className="px-8 border-0 md:border-l md:border-[#ffffff99]">
               <div className="mb-6">
                 <h2 className="uppercase text-primary font-bold text-2xl">
                   CONTACT US FOR ANY QUESTIONS

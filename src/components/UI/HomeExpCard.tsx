@@ -20,7 +20,7 @@ const HomeExpCard = ({
       </div>
       {titleArr && (
         <h3 className="text-primary text-center mt-4 font-medium whitespace-nowrap">
-          <span>{titleArr[0]}</span>
+          <span>{titleArr[0]} </span>
           <span>{titleArr.slice(1).join(" ")}</span>
         </h3>
       )}
